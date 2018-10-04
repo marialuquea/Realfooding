@@ -1,0 +1,25 @@
+bpdy{
+  margin: 0;
+}
+
+.background{
+  background-color: #78C2AD;
+  height: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+  grid-auto-rows: 200px 200px 200px;
+
+}
+
+.item6 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11 {
+  border: solid 1px red;
+}
