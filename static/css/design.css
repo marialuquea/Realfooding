@@ -1,25 +1,212 @@
-bpdy{
+body{
   margin: 0;
-}
-
-.background{
-  background-color: #78C2AD;
-  height: auto;
+  background: url("background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Finger Paint';
+  color: white;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 50% 10% 15% 25%;
+  height: 100vh;
   padding: 10px;
-  grid-auto-rows: 200px 200px 200px;
+}
+
+.grid-container img {
+  height: 150px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.item1, .item2, .item3, .item4, .item6, .item7, .item9, .item10, .item12, .item13, .item14, .item15, .item16{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item2 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  font-size: 100px;
+}
+.item3, .item6, .item9, .item12, .item15 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.item5, .item8, .item11, .item14, .item17 {
+  font-size: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.intro {
+  height: 80px;
+}
+
+.index{
+  float: left;
+  width: 100px;
+}
+.title{
+  font-size: 80px;
+  float: right;
+  padding-right: 10%;
+  margin: 0;
+}
+
+/* REAL FOOD PAGE*/
+.rf_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 100vh;
+}
+.rf1 { /* MAIN TITLE */
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+/* TITLES */
+.rf3, .rf5, .rf7, .rf9 {
+  font-size: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  color: #d32f2c;
+}
+/* IMAGES */
+.rf2, .rf4, .rf6, .rf8 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
 
 }
 
-.item6 {
-  grid-column-start: 2;
+
+/* MEAL PLAN PAGE */
+.mp_container {
+    display: grid;
+    grid-template-columns: 30% 35% 35%;
+    height: 100vh;
+}
+
+.mp2, .mp3, .mp4, .mp5, .mp6, .mp7, .mp8, .mp9, .mp10, .mp11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #d32f2c;
+}
+
+.mp1 { /* TITLE */
+  grid-column-start: 1;
   grid-column-end: 4;
 }
 
-.item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11 {
-  border: solid 1px red;
+.mp2{ /* RECIPES (2 & 7) */
+  grid-row-start: 2;
+  grid-row-end: 4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.mp7{
+  grid-row-start: 4;
+  grid-row-end: 6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.icon{
+  width: 200px;
+}
+
+/* GROCERIES PAGE */
+.g_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 100vh;
+}
+
+.g2, .g3, .g4 { /* IMAGES */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+.g5, .g6, .g7 { /* TITLES */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #d32f2c;
+}
+
+/* CONTACT PAGE */
+.c_container {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    height: 100vh;
+    color: #d32f2c;
+}
+.c1 {
+  font-size: 60px;
+  color: white;
+}
+.c2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  font-family: "Delius Unicase";
+  margin: 20px 40px;
+}
+
+.ctype {
+  height: 40px;
+  display: table-cell;
+  width: 500px;
+  border-radius: 5px;
+}
+form {
+  width: 50%;
+}
+button {
+  height: 38px;
+  padding: 0 30px;
+  line-height: 38px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #d32f2c;
+  border: 2px solid #d32f2c;
+  font-family: inherit;
+  color: white;
+}
+button:hover{ background-color: Transparent; color: #d32f2c}
+
+/* CONTAINERS */
+.information-grid {
+  display: grid;
+}
+.information{
+  width:850px;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 10px auto;
+  padding:20px;
+  color: #d32f2c;
 }
