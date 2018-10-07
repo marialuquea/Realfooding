@@ -11,3 +11,4 @@
 6. In web brower, go to http://set09103.napier.ac.uk:9151
 
 
+![alt text](https://raw.githubusercontent.com/marialuquea/luqueanguita_maria_set09103_cw1/master/static/img/screenshot.png)
