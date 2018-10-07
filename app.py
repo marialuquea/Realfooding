@@ -21,5 +21,17 @@ def groceries():
 def contact():
     return render_template('contact.html')
 
+@app.route('/realfood/fruit/')
+def fruit():
+    return render_template('fruit_layout.html')
+
+@app.route('/realfood/fruit/spring-and-summer/')
+def spring():
+    return render_template('spring_fruits.html')
+
+@app.route('/realfood/fruit/spring-and-summer/<fruit>')
+def fruits():
+    return render_template('<fruit>.html')
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
