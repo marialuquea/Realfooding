@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+  <head>
+    <title>Real Food</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}"/>
+    <link rel='icon' href="{{ url_for('static', filename='img/favicon.ico') }}"/>
+    <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="mp_container">
+      <div class="mp1">
+        <a href="/">
+          <img src={{ url_for('static', filename='img/arrow.png') }} class="index">
+        </a>
+        <p class="title"> Meal Plans</p>
+      </div>
+      <div class="mp2">
+        <a href="#">
+          <img src={{ url_for('static', filename='img/recipes.png') }} class="icon">
+        </a>
+      </div>
+      <div class="mp3">
+        <a href="#">
+          <img src={{ url_for('static', filename='img/breakfast.png') }} class="icon">
+        </a>
+      </div>
+      <div class="mp4">
+        <a href="#">
+          <img src={{ url_for('static', filename='img/lunch.png') }} class="icon">
+        </a>
+      </div>
+      <div class="mp5">Breakfast</div>
+      <div class="mp6">Lunch</div>
+      <div class="mp7"> Recipes</div>
+      <div class="mp8">
+        <a href="#">
+          <img src={{ url_for('static', filename='img/snacks.png') }} class="icon">
+        </a>
+      </div>
+      <div class="mp9">
+        <a href="#">
+          <img src={{ url_for('static', filename='img/dinner.png') }} class="icon">
+        </a>
+      </div>
+      <div class="mp10">Snacks</div>
+      <div class="mp11">Dinner</div>
+    </div>
+  </body>
+
+</html>

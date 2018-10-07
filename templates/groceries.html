@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+  <head>
+    <title>Grocery Shopping</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}"/>
+    <link rel='icon' href="{{ url_for('static', filename='img/favicon.ico') }}"/>
+    <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="g_container">
+      <div class="mp1">
+        <a href="/">
+          <img src={{ url_for('static', filename='img/arrow.png') }} class="index">
+        </a>
+        <p class="title">Grocery Shopping</p>
+      </div>
+      <div class="g2">
+        <a href="#">
+          <img src={{ url_for('static', filename='img/diet.png') }} class="icon">
+        </a>
+      </div>
+      <div class="g3">
+        <a href="#">
+          <img src={{ url_for('static', filename='img/sport.png') }} class="icon">
+        </a>
+      </div>
+      <div class="g4">
+        <a href="#">
+          <img src={{ url_for('static', filename='img/events.png') }} class="icon">
+        </a>
+      </div>
+      <div class="g5">
+        <a href="#">
+          Diet
+        </a>
+      </div>
+      <div class="g6">
+        <a href="#">
+          Sport
+        </a>
+      </div>
+      <div class="g7">
+        <a href="#">
+          Events
+        </a>
+      </div>
+    </div>
+  </body>
+
+</html>

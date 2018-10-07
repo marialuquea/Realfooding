@@ -4,7 +4,7 @@
   <head>
     <title>Realfooding</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}"/>
-    <link rel='icon' href='/static/img/favicon.ico'/>
+    <link rel='icon' href="{{ url_for('static', filename='img/favicon.ico') }}"/>
     <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
   </head>
 
@@ -15,12 +15,12 @@
       <div class="item2">  RealFooding  </div>
       <div class="item3"></div>
       <div class="item4">
-        <a href="realfood.html">
+        <a href="/realfood/">
           <img class="intro" src={{ url_for('static', filename='img/apple.png') }}>
         </a>
       </div>
       <div class="item5">
-        <a href="realfood.html">
+        <a href="/realfood/">
           Real food
         </a>
       </div>
@@ -35,30 +35,30 @@
       <div class="item8"> Ultraprocessed food </div>
       <div class="item9"></div>
       <div class="item10">
-        <a href="mealplan.html">
+        <a href="/mealplan/">
           <img class="intro" src={{ url_for('static', filename='img/plan.png') }}>
         </a>
       </div>
       <div class="item11">
-        <a href="mealplan.html">Meal plan</a>
+        <a href="/mealplan/">Meal plan</a>
       </div>
       <div class="item12"></div>
       <div class="item13">
-        <a href="groceries.html">
+        <a href="/groceries/">
           <img class="intro" src={{ url_for('static', filename='img/cart.png') }}>
         </a>
       </div>
       <div class="item14">
-        <a href="groceries.html">Grocery Shopping</a>
+        <a href="/groceries/">Grocery Shopping</a>
       </div>
       <div class="item15"></div>
       <div class="item16">
-        <a href="contact.html">
+        <a href="/contact/">
           <img class="intro" src={{ url_for('static', filename='img/iphone.png') }}>
         </a>
       </div>
       <div class="item17">
-        <a href="contact.html">Contact</a>
+        <a href="/contact/">Contact</a>
       </div>
     </div>
   </body>

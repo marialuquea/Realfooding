@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+  <head>
+    <title>Real Food</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}"/>
+    <link rel='icon' href="{{ url_for('static', filename='img/favicon.ico') }}"/>
+    <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="rf_container">
+      <div class="rf1">
+        <a href="/">
+          <img src={{ url_for('static', filename='img/arrow.png') }} class="index">
+        </a>
+        <p class="title">Real Foods</p>
+      </div>
+      <div class="rf2">
+        <a href="fruit.html">  <img src={{ url_for('static', filename='img/fruit.png') }} class="icon"></a>
+      </div>
+      <div class="rf3">
+        <a href="fruit.html">Fruit</a>
+      </div>
+      <div class="rf4">
+        <a href="#">
+          <img src={{ url_for('static', filename='img/verdura.png') }} class="icon">
+        </a>
+      </div>
+      <div class="rf5">
+        <a href="#">Vegetables</a>
+      </div>
+      <div class="rf6">
+        <a href="#">  <img src={{ url_for('static', filename='img/fishmeat.png') }} class="icon">  </a>
+      </div>
+      <div class="rf7">
+        <a href="#">Fish & Meat</a>
+      </div>
+      <div class="rf8">
+        <a href="#">  <img src={{ url_for('static', filename='img/otherfruit.png') }} class="icon">  </a>
+      </div>
+      <div class="rf9">
+        <a href="#">Others</a>
+      </div>
+    </div>
+  </body>
+
+</html>
