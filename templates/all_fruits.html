@@ -1,0 +1,81 @@
+{% extends "fruit_layout.html" %}
+{% block content %}
+
+  {% if fruit == 'banana' %}
+    <h1>Banana</h1>
+    <img src={{ url_for('static', filename='img/realfood/banana.png') }} class="icon">
+    <br>
+    <p>A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas. </p>
+    <p>The fruit is variable in size, color, and firmness, but is usually elongated and curved, with soft flesh rich in starch covered with a rind, which may be green, yellow, red, purple, or brown when ripe. The fruits grow in clusters hanging from the top of the plant.</p>
+
+  {% elif fruit == 'pineapple' %}
+    <h1>Pineapple</h1>
+    <img src={{ url_for('static', filename='img/realfood/pineapple.png') }} class="icon">
+    <p>The pineapple (Ananas comosus) is a tropical plant with an edible multiple fruit consisting of coalesced berries, also called pineapples, and the most economically significant plant in the family Bromeliaceae.</p>
+
+  {% elif fruit == 'avocado' %}
+    <h1>Avocado</h1>
+    <img src={{ url_for('static', filename='img/realfood/avocado.png') }} class="icon">
+    <p>The avocado (Persea americana) is a tree, long thought to have originated in South Central Mexico, classified as a member of the flowering plant family Lauraceae. The fruit of the plant, also called an avocado (or avocado pear or alligator pear), is botanically a large berry containing a single large seed known as a "pit" or a "stone".</p>
+
+  {% elif fruit == 'mango' %}
+    <h1>Mango</h1>
+    <img src={{ url_for('static', filename='img/realfood/mango.png') }} class="icon">
+    <p>Mangoes are juicy stone fruit (drupe) from numerous species of tropical trees belonging to the flowering plant genus Mangifera, cultivated mostly for their edible fruit.</p>
+
+
+    {% elif fruit == 'apricot' %}
+      <h1>Apricot</h1>
+      <img src={{ url_for('static', filename='img/realfood/apricot.png') }} class="icon">
+      <br>
+      <p>An apricot is a fruit, or the tree that bears the fruit, of several species in the genus Prunus (stone fruits).</p>
+      <p>Usually, an apricot tree is from the species P. armeniaca, but the species P. brigantina, P. mandshurica, P. mume, P. zhengheensis and P. sibirica are closely related, have similar fruit, and are also called apricots.</p>
+
+    {% elif fruit == 'berries' %}
+      <h1>Berries</h1>
+      <img src={{ url_for('static', filename='img/realfood/berries.png') }} class="icon">
+      <p>A berry is a small, pulpy, and often edible fruit. Berries are typically juicy, rounded, brightly colored, sweet or sour, and do not have a stone or pit, although many pips or seeds may be present. Common examples are strawberries, raspberries, blueberries, blackberries, red currants, white currants and blackcurrants. In Britain, soft fruit is a horticultural term for such fruits</p>
+
+    {% elif fruit == 'cherry' %}
+      <h1>Cherries</h1>
+      <img src={{ url_for('static', filename='img/realfood/cherry.png') }} class="icon">
+      <p>A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe (stone fruit).</p>
+      <p>The cherry fruits of commerce usually are obtained from cultivars of a limited number of species such as the sweet cherry (Prunus avium) and the sour cherry (Prunus cerasus). The name 'cherry' also refers to the cherry tree and its wood, and is sometimes applied to almonds and visually similar flowering trees in the genus Prunus, as in "ornamental cherry" or "cherry blossom". Wild cherry may refer to any of the cherry species growing outside cultivation, although Prunus avium is often referred to specifically by the name "wild cherry" in the British Isles.</p>
+
+    {% elif fruit == 'peach' %}
+      <h1>Peach</h1>
+      <img src={{ url_for('static', filename='img/realfood/peach.png') }} class="icon">
+      <p>The peach (Prunus persica) is a deciduous tree native to the region of Northwest China between the Tarim Basin and the north slopes of the Kunlun Mountains, where it was first domesticated and cultivated. It bears an edible juicy fruit called a peach or a nectarine.</p>
+
+
+      {% elif fruit == 'apple' %}
+        <h1>Apple Inc.</h1>
+        <img src={{ url_for('static', filename='img/realfood/appleinc.png') }} class="icon">
+        <br>
+        Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software, and online services. The company's hardware products include the iPhone smartphone, the iPad tablet computer, the Mac personal computer, the iPod portable media player, the Apple Watch smartwatch, the Apple TV digital media player, and the HomePod smart speaker. Apple's software includes the macOS and iOS operating systems, the iTunes media player, the Safari web browser, and the iLife and iWork creativity and productivity suites, as well as professional applications like Final Cut Pro, Logic Pro, and Xcode. Its online services include the iTunes Store, the iOS App Store and Mac App Store, Apple Music, and iCloud.
+
+      {% elif fruit == 'kiwi' %}
+        <h1>Kiwi</h1>
+        <img src={{ url_for('static', filename='img/realfood/kiwi.png') }} class="icon">
+        <p>Kiwi (/ˈkiːwi/ KEE-wee) or kiwis are flightless birds native to New Zealand, in the genus Apteryx and family Apterygidae. Approximately the size of a domestic chicken, kiwi are by far the smallest living ratites (which also consist of ostriches, emus, rheas, and cassowaries), and lay the largest egg in relation to their body size of any species of bird in the world.</p>
+
+      {% elif fruit == 'pear' %}
+        <h1>Pears</h1>
+        <img src={{ url_for('static', filename='img/realfood/pear.png') }} class="icon">
+        <p>The pear (/ˈpɛər/) tree and shrub are a species of genus Pyrus /ˈpaɪrəs/, in the family Rosaceae, bearing the pomaceous fruit of the same name. Several species of pear are valued for their edible fruit and juices while others are cultivated as trees.</p>
+
+      {% elif fruit == 'grapes' %}
+        <h1>Grapes</h1>
+        <img src={{ url_for('static', filename='img/realfood/grapes.png') }} class="icon">
+        <p>A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis.</p>
+        <p>Grapes can be eaten fresh as table grapes or they can be used for making wine, jam, juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil. Grapes are a non-climacteric type of fruit, generally occurring in clusters.</p>
+
+  {% else %}
+    <h1>Sorry, what you're looking for is not in this web, yet.</h1>
+    <h1>Or it's not in the Tropical fruits.</h1>
+    <h2>Maybe you might wanna leave a message in the Contact area to let me know what fruits I should add?? :)</h2>
+
+  {% endif %}
+
+
+{% endblock %}}
