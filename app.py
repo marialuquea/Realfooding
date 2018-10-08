@@ -34,7 +34,7 @@ def spring():
 @app.route('/realfood/fruit/fall-and-winter/<fruit>/')
 @app.route('/realfood/fruit/tropical/<fruit>/')
 def s_fruits(fruit):
-    return render_template('tropical.html', fruit=fruit)
+    return render_template('all_fruits.html', fruit=fruit)
 
 @app.route('/realfood/fruit/fall-and-winter/')
 def winter():
