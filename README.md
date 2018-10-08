@@ -12,4 +12,7 @@
 6. In web brower, go to http://set09103.napier.ac.uk:9151
 
 ![Screenshot](screenshot.png)
-      
+
+To do:
+- [ ] 404 page
+- [ ] canva index circles

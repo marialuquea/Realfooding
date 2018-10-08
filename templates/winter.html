@@ -1,0 +1,16 @@
+{% extends "fruit_layout.html" %}
+{% block content %}
+
+  {% if fruit == 'apple' %}
+    <h1>{{ fruit }}!</h1>
+
+  {% elif fruit == 'kiwi' %}
+    <h1>kiwi!</h1>
+
+  {% else %}
+    <h1>Doesn't read fruit ugh</h1>
+    
+  {% endif %}
+
+
+{% endblock %}}
