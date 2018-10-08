@@ -1,0 +1,35 @@
+{% extends "fruit_layout.html" %}
+{% block content %}
+
+  {% if fruit == 'apricot' %}
+    <h1>Apricot</h1>
+    <img src={{ url_for('static', filename='img/apricot.png') }} class="icon">
+    <br>
+    <p>An apricot is a fruit, or the tree that bears the fruit, of several species in the genus Prunus (stone fruits).</p>
+    <p>Usually, an apricot tree is from the species P. armeniaca, but the species P. brigantina, P. mandshurica, P. mume, P. zhengheensis and P. sibirica are closely related, have similar fruit, and are also called apricots.</p>
+
+  {% elif fruit == 'berries' %}
+    <h1>Berries</h1>
+    <img src={{ url_for('static', filename='img/berries.png') }} class="icon">
+    <p>A berry is a small, pulpy, and often edible fruit. Berries are typically juicy, rounded, brightly colored, sweet or sour, and do not have a stone or pit, although many pips or seeds may be present. Common examples are strawberries, raspberries, blueberries, blackberries, red currants, white currants and blackcurrants. In Britain, soft fruit is a horticultural term for such fruits</p>
+
+  {% elif fruit == 'cherry' %}
+    <h1>Cherries</h1>
+    <img src={{ url_for('static', filename='img/cherry.png') }} class="icon">
+    <p>A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe (stone fruit).</p>
+    <p>The cherry fruits of commerce usually are obtained from cultivars of a limited number of species such as the sweet cherry (Prunus avium) and the sour cherry (Prunus cerasus). The name 'cherry' also refers to the cherry tree and its wood, and is sometimes applied to almonds and visually similar flowering trees in the genus Prunus, as in "ornamental cherry" or "cherry blossom". Wild cherry may refer to any of the cherry species growing outside cultivation, although Prunus avium is often referred to specifically by the name "wild cherry" in the British Isles.</p>
+
+  {% elif fruit == 'peach' %}
+    <h1>Peach</h1>
+    <img src={{ url_for('static', filename='img/peach.png') }} class="icon">
+    <p>The peach (Prunus persica) is a deciduous tree native to the region of Northwest China between the Tarim Basin and the north slopes of the Kunlun Mountains, where it was first domesticated and cultivated. It bears an edible juicy fruit called a peach or a nectarine.</p>
+
+  {% else %}
+    <h1>Sorry, what you're looking for is not in this web, yet.</h1>
+    <h1>Or it's not in the Summer fruits.</h1>
+    <h2>Maybe you might wanna leave a message in the Contact area to let me know what fruits I should add?? :)</h2>
+
+  {% endif %}
+
+
+{% endblock %}}

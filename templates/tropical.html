@@ -1,0 +1,34 @@
+{% extends "fruit_layout.html" %}
+{% block content %}
+
+  {% if fruit == 'banana' %}
+    <h1>Banana</h1>
+    <img src={{ url_for('static', filename='img/banana.png') }} class="icon">
+    <br>
+    <p>A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas. </p>
+    <p>The fruit is variable in size, color, and firmness, but is usually elongated and curved, with soft flesh rich in starch covered with a rind, which may be green, yellow, red, purple, or brown when ripe. The fruits grow in clusters hanging from the top of the plant.</p>
+
+  {% elif fruit == 'pineapple' %}
+    <h1>Pineapple</h1>
+    <img src={{ url_for('static', filename='img/pineapple.png') }} class="icon">
+    <p>The pineapple (Ananas comosus) is a tropical plant with an edible multiple fruit consisting of coalesced berries, also called pineapples, and the most economically significant plant in the family Bromeliaceae.</p>
+
+  {% elif fruit == 'avocado' %}
+    <h1>Avocado</h1>
+    <img src={{ url_for('static', filename='img/avocado.png') }} class="icon">
+    <p>The avocado (Persea americana) is a tree, long thought to have originated in South Central Mexico, classified as a member of the flowering plant family Lauraceae. The fruit of the plant, also called an avocado (or avocado pear or alligator pear), is botanically a large berry containing a single large seed known as a "pit" or a "stone".</p>
+
+  {% elif fruit == 'mango' %}
+    <h1>Mango</h1>
+    <img src={{ url_for('static', filename='img/mango.png') }} class="icon">
+    <p>Mangoes are juicy stone fruit (drupe) from numerous species of tropical trees belonging to the flowering plant genus Mangifera, cultivated mostly for their edible fruit.</p>
+
+  {% else %}
+    <h1>Sorry, what you're looking for is not in this web, yet.</h1>
+    <h1>Or it's not in the Tropical fruits.</h1>
+    <h2>Maybe you might wanna leave a message in the Contact area to let me know what fruits I should add?? :)</h2>
+
+  {% endif %}
+
+
+{% endblock %}}
