@@ -1,0 +1,42 @@
+<html>
+
+  <head>
+    <title>RealFooding</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}"/>
+    <link rel='icon' href="{{ url_for('static', filename='img/favicon3.ico') }}"/>
+    <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Delius Unicase' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="information-grid">
+      <div class="c1">
+        <a href="../">
+          <img src={{ url_for('static', filename='img/arrow.png') }} class="index">
+        </a>
+        <p class="title">Vegetables</p>
+      </div>
+
+      <div class="information">
+        {% block content %}
+
+          <h1>Ugh, vegetables... </h1>
+          <p>Vegetables not only provide vitamins and minerals, they offer a range of phytonutrients that are not provided by supplements. You can pop a pill with a boatload of one anti-oxidant, but you’re better off getting small amounts of a variety of anti-oxidants from real food.</p>
+
+
+          <ul>
+            <li><a href="/realfood/vegetables/pepper/" title="More info">Peppers</a></li>
+            <li><a href="/realfood/vegetables/carrot/" title="More info">Carrots</a></li>
+            <li><a href="/realfood/vegetables/garlic/" title="More info">Garlic</a></li>
+            <li><a href="/realfood/vegetables/onion/" title="More info">Onion</a></li>
+            <li><a href="/realfood/vegetables/potato/" title="More info">Potato</a></li>
+            <li><a href="/realfood/vegetables/tomato/" title="More info">Tomato</a></li>
+          </ul>
+
+
+         {% endblock %}
+      </div>
+    </div>
+  </body>
+
+</html>

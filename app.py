@@ -21,6 +21,7 @@ def groceries():
 def contact():
     return render_template('contact.html')
 
+
 @app.route('/realfood/fruit/')
 def fruit():
     return render_template('fruit_layout.html')
@@ -48,6 +49,16 @@ def tropical():
 @app.route('/realfood/fruit/tropical/<fruit>/')
 def t_fruits(fruit):
     return render_template('tropical.html', fruit=fruit)
+
+
+@app.route('/realfood/vegetables/')
+def vegs():
+    return render_template('vegetables.html')
+
+@app.route('/realfood/vegetables/<veg>/')
+def vegs2(veg):
+    return render_template('all_vegetables.html', veg=veg)
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
