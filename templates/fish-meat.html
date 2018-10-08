@@ -1,0 +1,51 @@
+<html>
+
+  <head>
+    <title>RealFooding</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}"/>
+    <link rel='icon' href="{{ url_for('static', filename='img/favicon3.ico') }}"/>
+    <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Delius Unicase' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="information-grid">
+      <div class="c1">
+        <a href="../">
+          <img src={{ url_for('static', filename='img/arrow.png') }} class="index">
+        </a>
+        <p class="title">Fish & Meat</p>
+      </div>
+
+      <div class="information">
+        {% block content %}
+
+          <h1>Fish</h1>
+
+          <h3>White Fish</h3>
+          <p>Whitefish stands out for being easier to digest and having fewer calories per serving and blue for being more protein and mineral-rich, very appropriate for growing children and pregnant women. Thanks to the fatty acids that clean the arteries, blue fish has a heart-healthy effect since it helps to prevent and control heart and inflammatory problems.</p>
+          <p>Some white fish examples are <a href="/realfood/fish/cod/" class="ared">cod</a> and <a href="/realfood/fish/haddock/" class="ared">haddock</a>.</p>
+
+          <h3>Blue Fish</h3>
+          <p>Blue fish has at least 5 grams of fat per 100g of edible meat and white has less, it is leaner, so nutritionists recommend it according to the type of diet. But also blue fish is richer in unsaturated fats and omega-3, which helps regulate triglyceride and cholesterol levels. Although the proportion of fatty acids also depends on factors such as the species, the size or the time of year when fishing.</p>
+          <p><a href="/realfood/fish/tuna/" class="ared">Tuna</a>, <a href="/realfood/fish/salmon/" class="ared">salmon</a> and <a href="/realfood/fish/anchovies/" class="ared">anchovies</a> are types of blue fish.</p>
+
+          <h1>Meat</h1>
+
+          <p>Meat is a good source of protein, vitamins and minerals in your diet. However, if you currently eat more than 90g (cooked weight) of red and processed meat a day, the Department of Health advises that you cut down to 70g, which is the average daily consumption in the UK.</p>
+          <p>Red meat (such as <a href="/realfood/fish/beef/" class="ared">beef</a>, <a href="/realfood/fish/lamb/" class="ared">lamb</a> and <a href="/realfood/fish/pork/" class="ared">pork</a> ) can form part of a healthy diet. But eating a lot of red and processed meat probably increases your risk of bowel (colorectal) cancer.</p>
+          <p>Processed meat refers to meat that has been preserved by smoking, curing, salting or adding preservatives. This includes <a href="#" class="ared">sausages</a>, <a href="#" class="ared">bacon</a>, <a href="#" class="ared">ham</a>, <a href="#" class="ared">salami</a> and
+            <a href="/realfood/fish/cod/" class="ared">pâtés</a>.</p>
+          <p>If you currently eat more than 90g (cooked weight) of red and processed meat a day, the Department of Health advises that you cut down to 70g, which is the average daily consumption in the UK.</p>
+          <p>Ninety grams is equivalent to around three thinly cut slices of <a href="/realfood/fish/beef/" class="ared">beef</a>, <a href="/realfood/fish/lamb/" class="ared">lamb</a> or <a href="/realfood/fish/pork/" class="ared">pork</a>, where each slice is about the size of half a piece of sliced bread. A cooked breakfast containing two typical British sausages and two rashers of bacon is equivalent to 130g.</p>
+          <p>Making healthier choices can help you eat meat as part of a healthy, <a href="#" class="ared">balanced diet</a>. But some meats are high in saturated fat, which can raise blood cholesterol levels.</p>
+          <p>If you eat a lot of red and processed meat, it is recommended that you cut down as there is likely to be a link between red and processed meat and bowel cancer.</p>
+          <p>Meats such as <a href="/realfood/fish/chicken/" class="ared">chicken</a>, <a href="/realfood/fish/pork/" class="ared">pork</a>, <a href="/realfood/fish/lamb/" class="ared">lamb</a> and <a href="/realfood/fish/beef/" class="ared">beef</a> are all rich in protein. A
+             <a href="#" class="ared">balanced diet</a> can include protein from meat, as well as from non-animal sources such as beans and pulses.</p>
+
+         {% endblock %}
+      </div>
+    </div>
+  </body>
+
+</html>

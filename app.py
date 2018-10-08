@@ -59,6 +59,18 @@ def vegs():
 def vegs2(veg):
     return render_template('all_vegetables.html', veg=veg)
 
+@app.route('/realfood/fish/')
+@app.route('/realfood/meat/')
+@app.route('/realfood/fish-meat/')
+def fm():
+    return render_template('fish-meat.html')
+
+@app.route('/realfood/fish/<type>/')
+@app.route('/realfood/meat/<type>/')
+@app.route('/realfood/fish-meat/<type>/')
+def fm2(type):
+    return render_template('all-fish-meat.html', type=type)
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)

@@ -20,10 +20,25 @@ body{
   height: 150px;
 }
 
-a{
+/* A TAGS LINKS */
+.awhite{
   text-decoration: none;
   color: inherit;
 }
+.awhite:hover{
+  text-decoration: underline;
+  color: #d32f2c;
+}
+.ared{
+  text-decoration: underline;
+  color: green;
+}
+.ared:hover{
+  color: lightblue;
+}
+
+
+
 
 .item1, .item2, .item3, .item4, .item6, .item7, .item9, .item10, .item12, .item13, .item14, .item15, .item16{
   display: flex;
