@@ -1,0 +1,117 @@
+<html>
+
+  <head>
+    <title>RealFooding</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}"/>
+    <link rel='icon' href="{{ url_for('static', filename='img/favicon3.ico') }}"/>
+    <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="information-grid">
+      <div class="c1">
+        <a href="../">
+          <img src={{ url_for('static', filename='img/arrow.png') }} class="index">
+        </a>
+        <p class="title"> Grocery Shopping </p>
+      </div>
+
+      <div class="information">
+        {% block content %}
+          <h1>{{ option.upper() }}</h1>
+
+          {% if option == 'diet' %}
+            <h2>Let's make a healthy grocery list!</h2>
+
+            <ol>
+              <li>Bakery and Bread
+                <ul>
+                  <li>Whole wheat bread</li>
+                  <li>Whole-grain flour tortillas</li>
+                </ul>
+              </li>
+              <li>Meat and Seafood
+                <ul>
+                  <li>Skinless chicken or turkey breasts</li>
+                  <li>Ground turkey or chicken</li>
+                  <li>Salmon, halibut, trout, mackerel, or your favorite seafood</li>
+                  <li>Reduced-sodium lunchmeat (turkey, roast beef)</li>
+                  <li>If you buy red meat, choose the leanest cuts -- ones with very little marbling.</li>
+                </ul>
+              </li>
+              <li>Pasta and Rice
+                <ul>
+                  <li>Brown rice</li>
+                  <li>Whole wheat or whole-grain pasta</li>
+                </ul>
+              </li>
+              <li>Oils, Sauces, Salad Dressings, and Condiments
+                <ul>
+                  <li>Tomato sauce</li>
+                  <li>Red-wine vinegar</li>
+                  <li>Extra virgin olive oil, canola oil, nonfat cooking spray</li>
+                  <li>Olives</li>
+                </ul>
+              </li>
+              <li>Cereals and Breakfast Foods
+                <ul>
+                  <li>Whole-grain or multigrain cereals</li>
+                  <li>Steel-cut or instant oatmeal</li>
+                  <li>Whole-grain cereal bars</li>
+                </ul>
+              </li>
+              <li>Soups and Canned goods
+                <ul>
+                  <li>Diced or whole peeled tomatoes</li>
+                  <li>Tuna or salmon packed in water</li>
+                  <li>Low-sodium soups and broths</li>
+                  <li>Black, kidney, soy, or garbanzo beans; lentils, split peas</li>
+                </ul>
+              </li>
+              <li>Frozen Foods
+                <ul>
+                  <li>Frozen vegetables: broccoli, spinach, peas, and carrots (no sauce)</li>
+                  <li>rozen fruit: strawberries, raspberries, blueberries (without added sugar)</li>
+                  <li>Whole-grain vegetable pizza</li>
+                </ul>
+              </li>
+              <li>Dairy (skim or soy milk), free fat cheese and eggs</li>
+              <li>Dried fruit and seeds</li>
+              <li>Hummus</li>
+              <li>Dark chocolat with no sugar added</li>
+              <li>FRUITS AND VEGETABLES ALL OF THEM OF COURSE</li>
+            </ol>
+
+          {% elif option == 'sport' %}
+          <h3>Uhhh tough</h3>
+          <ol>
+            <li>Eggs</li>
+            <li>Salmon</li>
+            <li>Chicken breast</li>
+            <li>Greek yogurt</li>
+            <li>Tuna</li>
+            <li>Lean beef</li>
+            <li>Shrimps</li>
+            <li>Soybeans</li>
+          </ol>
+
+          {% elif option == 'events' %}
+          <p>Eating healthy when dining out at social events like parties, receptions, and family gatherings can be a challenging experience when you are trying to balance healthy foods with foods high in fat, salt and sugar.</p>
+          <p>Here are some ideas for event recipes: </p>
+          <ol>
+            <li>Home made watermelon ice cream</li>
+            <li>Home made mixed berries yogurt</li>
+            <li>Nuts</li>
+            <li>Banana and wholemeal flour chocolate brownie</li>
+            <li>Fruit salad</li>
+            <li>Baked artichokes with lemon, salt and vinegar</li>
+          </ol>
+
+          {% endif %}
+
+         {% endblock %}
+      </div>
+    </div>
+  </body>
+
+</html>

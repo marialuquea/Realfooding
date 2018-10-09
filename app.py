@@ -1,6 +1,9 @@
 from flask import *
 app = Flask(__name__)
 
+recipes_data = json.load(open("static/jsonfiles/recipes.json"))
+food_data = json.load(open("static/jsonfiles/food.json"))
+
 @app.route('/')
 def root():
     return render_template('index.html')
@@ -59,7 +62,12 @@ def vegs():
 
 @app.route('/realfood/vegetables/<veg>/')
 def vegs2(veg):
-    return render_template('realfood/all_vegetables.html', veg=veg)
+    for v in food_data['food']:
+        if v['name'].lower() == veg:
+            name = v['name']
+            image = v['image']
+            info = v['info']
+    return render_template('realfood/all_vegetables.html', name=name, image=image, info=info)
 
 @app.route('/realfood/fish/')
 @app.route('/realfood/meat/')
@@ -82,28 +90,39 @@ def all_others(other):
     return render_template('realfood/all_others.html', other=other)
 
 
-data = json.load(open("static/jsonfiles/recipes.json"))
+
 @app.route('/mealplan/recipes/')
 def r():
     # PRINT ALL RECIPE NAMES
     names = []
-    for r in data['recipes']:
+    for r in recipes_data['recipes']:
         names.append(r['name'])
     return render_template('mealplan/recipes.html', recipes=names)
 
-@app.route('/mealplan/recipes/<search>')
+@app.route('/mealplan/recipes/<search>/')
 def r_search(search):
     # PRINT ONE RECIPE
     ingredients = []
-    for r in data['recipes']:
+    for r in recipes_data['recipes']:
         if r['name'].lower() == search:
             name = r['name']
             how_to_cook = r['preparation']
             for i in r['ingredients']:
                 ingredients.append(i)
+        else:
+            # 404 ERROR
+            name = "Sorry, we don't have that recipe, yet"
+            how_to_cook = ":("
+            ingredients = []
     return render_template('mealplan/recipe.html', name=name , preparation=how_to_cook, ingredients=ingredients)
 
-
+@app.route('/groceries/<option>/')
+def groceryopt(option):
+    option.lower()
+    if option == 'diet' or option == 'sport' or option == 'events':
+        return render_template('groceries/grocery_shop.html', option=option)
+    else:
+        return render_template('404error.html')
 
 
 if __name__ == "__main__":

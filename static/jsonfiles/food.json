@@ -1,0 +1,9 @@
+{
+    "food": [
+        {
+            "name": "Pepper",
+            "image": "{{ url_for('static', filename='/img/realfood/vegetables/pepper.png') }}",
+            "info": "bla bla bla"
+        }
+    ]
+}
