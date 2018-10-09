@@ -9,6 +9,10 @@ body{
   color: white;
 }
 
+span {
+  text-decoration: underline;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 50% 10% 15% 25%;

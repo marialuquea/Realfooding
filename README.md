@@ -16,3 +16,10 @@
 To do:
 - [ ] 404 page
 - [ ] canva index circles
+- [ ] sausages
+- [ ] bacon
+- [ ] ham
+- [ ] salami
+- [ ] pates
+- [ ] balanced diet
+- [ ] water
