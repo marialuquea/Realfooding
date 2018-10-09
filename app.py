@@ -9,6 +9,10 @@ def root():
 def realfood():
     return render_template('realfood.html')
 
+@app.route('/ultraprocessed/')
+def ultra():
+    return render_template('ultra.html')
+
 @app.route('/mealplan/')
 def mealplan():
     return render_template('mealplan.html')
@@ -30,6 +34,10 @@ def fruit():
 def spring():
     return render_template('realfood/spring_fruits.html')
 
+@app.route('/realfood/fruit/winter/<fruit>/')
+@app.route('/realfood/fruit/fall/<fruit>/')
+@app.route('/realfood/fruit/summer/<fruit>/')
+@app.route('/realfood/fruit/spring/<fruit>/')
 @app.route('/realfood/fruit/spring-and-summer/<fruit>/')
 @app.route('/realfood/fruit/fall-and-winter/<fruit>/')
 @app.route('/realfood/fruit/tropical/<fruit>/')
@@ -72,6 +80,30 @@ def other():
 @app.route('/realfood/others/<other>/')
 def all_others(other):
     return render_template('realfood/all_others.html', other=other)
+
+
+data = json.load(open("static/jsonfiles/recipes.json"))
+@app.route('/mealplan/recipes/')
+def r():
+    # PRINT ALL RECIPE NAMES
+    names = []
+    for r in data['recipes']:
+        names.append(r['name'])
+    return render_template('mealplan/recipes.html', recipes=names)
+
+@app.route('/mealplan/recipes/<search>')
+def r_search(search):
+    # PRINT ONE RECIPE
+    ingredients = []
+    for r in data['recipes']:
+        if r['name'].lower() == search:
+            name = r['name']
+            how_to_cook = r['preparation']
+            for i in r['ingredients']:
+                ingredients.append(i)
+    return render_template('mealplan/recipe.html', name=name , preparation=how_to_cook, ingredients=ingredients)
+
+
 
 
 if __name__ == "__main__":

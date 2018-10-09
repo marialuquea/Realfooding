@@ -1,0 +1,14 @@
+{% extends "mealplan/recipes.html" %}
+{% block content %}
+
+
+    <h1>{{ name }}</h1>
+    <ul>
+      {% for i in ingredients %}
+      <li>{{ i }}</li>
+      {% endfor %}
+    </ul>
+    <p>{{ preparation }}</p>
+
+
+{% endblock %}}

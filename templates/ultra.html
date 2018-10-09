@@ -1,0 +1,44 @@
+<html>
+
+  <head>
+    <title>RealFooding</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}"/>
+    <link rel='icon' href="{{ url_for('static', filename='img/favicon3.ico') }}"/>
+    <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="information-grid">
+      <div class="c1">
+        <a href="../">
+          <img src={{ url_for('static', filename='img/arrow.png') }} class="index">
+        </a>
+        <p class="title">Ultraprocessed food</p>
+      </div>
+
+      <div class="information">
+        {% block content %}
+
+          <h1>THESE ARE NOT REAL FOODS, THEY ARE UNHEALTHY AF </h1>
+          <p>But no, you don't have to give them up completely...</p>
+          <p>Research has shown us time and again that a diet rich in a processed foods is often high in added sugar, sodium, and trans fats and, therefore, comes with a higher risk for obesity, type 2 diabetes, and heart disease.</p>
+          <p>Essentially, <span>a processed food is just anything that's been deliberately altered in some way before you eat it</span>, which could mean that it's been frozen, dried, or artificially formulated from scratch into a microwaveable dinner.</p>
+
+          <img src={{ url_for('static', filename='img/Ultraprocessed/ultraprocessed.png') }} class="icon">
+
+          <h3>Examples of ultraprocessed foods</h3>
+
+          <ul>
+            <li>Frozen dinners, instant foods, microwave popcorn</li>
+            <li> <a href="/realfood/others/wholemeal/" class="ared">Breads</a>, <a href="/realfood/others/pasta/" class="ared">pastas</a> </li>
+            <li> Fruit snacks and gummies</li>
+            <li>Plant based alternatives to animal products, like vegan cheese, veggie burgers, or meat substitutes made from processed soy</li>
+            <li>Protein bars, powders, and shakes... but I will never stop having chocolate milkshakes...</li>
+          </ul>
+
+         {% endblock %}
+      </div>
+    </div>
+  </body>
+
+</html>

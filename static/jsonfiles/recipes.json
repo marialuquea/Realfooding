@@ -8,6 +8,14 @@
                 "olive oil"
             ],
             "preparation": "mix them and put them in pan"
+        },{
+            "name": "Salmorejo",
+            "ingredients": [
+                "tomatoes",
+                "bread",
+                "olive oil"
+            ],
+            "preparation": "mix them and put them in bowl"
         }
     ]
 }

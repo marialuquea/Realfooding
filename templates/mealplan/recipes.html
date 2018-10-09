@@ -1,0 +1,36 @@
+<html>
+
+  <head>
+    <title>RealFooding</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}"/>
+    <link rel='icon' href="{{ url_for('static', filename='img/favicon3.ico') }}"/>
+    <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="information-grid">
+      <div class="c1">
+        <a href="../">
+          <img src={{ url_for('static', filename='img/arrow.png') }} class="index">
+        </a>
+        <p class="title"> Recipes </p>
+      </div>
+
+      <div class="information">
+        {% block content %}
+
+          <h1>Here you have the most delicious, easy and healthy recipes you'll ever find</h1>
+
+          <ul>
+            {% for r in recipes %}
+            <li> <a href="#" class="ared"> {{ r }} </a></li>
+            {% endfor %}
+          </ul>
+
+
+         {% endblock %}
+      </div>
+    </div>
+  </body>
+
+</html>
