@@ -23,3 +23,4 @@ To do:
 - [ ] pates
 - [ ] balanced diet
 - [ ] water
+- [ ] download pyramid

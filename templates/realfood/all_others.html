@@ -1,0 +1,77 @@
+{% extends "realfood/other.html" %}
+{% block content %}
+
+  {% if other == 'wholemeal' %}
+    <h1>Wholemeal cereals and breads</h1>
+    <img src={{ url_for('static', filename='img/realfood/other/cereal.png') }} class="icon">
+    <p>A whole grain, also called a wholegrain, is a grain of any cereal and pseudocereal that contains the endosperm, germ, and bran, in contrast to refined grains, which retain only the endosperm</p>
+    <p>In a small part of the general population, gluten – proteins found in wheat and related grains – can trigger coeliac disease, non-coeliac gluten sensitivity, gluten ataxia and dermatitis herpetiformis.</p>
+
+  {% elif other == 'pasta' %}
+    <h1>Pasta</h1>
+    <img src={{ url_for('static', filename='img/realfood/other/pasta.png') }} class="icon">
+    <p>Pasta (Italian pronunciation: [ˈpasta]) is a staple food of traditional Italian cuisine, with the first reference dating to 1154 in Sicily. Also commonly used to refer to the variety dishes made with it, pasta is typically made from an unleavened dough of a durum wheat flour mixed with water or eggs, and formed into sheets or various shapes, then cooked by boiling or baking. Some pastas can be made using rice flour in place of wheat flour to yield a different taste and texture, or for those who need to avoid products containing gluten.</p>
+
+  {% elif other == 'rice' %}
+    <h1>Rice</h1>
+    <img src={{ url_for('static', filename='img/realfood/other/rice.png') }} class="icon">
+    <p>Rice is the seed of the grass species Oryza sativa (Asian rice) or Oryza glaberrima (African rice). As a cereal grain, it is the most widely consumed staple food for a large part of the world's human population, especially in Asia. It is the agricultural commodity with the third-highest worldwide production (rice, 741.5 million tonnes in 2014), after sugarcane (1.9 billion tonnes) and maize (1.0 billion tonnes).</p>
+
+  {% elif other == 'milk' %}
+    <h1>Milk</h1>
+    <img src={{ url_for('static', filename='img/realfood/other/milk.png') }} class="icon">
+    <p>Milk is a white liquid nutrient-rich food produced by the mammary glands of mammals. It is the primary source of nutrition for infant mammals (including humans who are breastfed) before they are able to digest other types of food. Early-lactation milk contains colostrum, which carries the mother's antibodies to its young and can reduce the risk of many diseases. It contains many other nutrients including protein and lactose. Interspecies consumption of milk is not uncommon, particularly among humans, many of whom consume the milk of other mammals.</p>
+
+  {% elif other == 'yogurt' %}
+    <h1>Yogurt</h1>
+    <img src={{ url_for('static', filename='img/realfood/other/yogurt.png') }} class="icon">
+    <p>Yogurt, yoghurt, or yoghourt (/ˈjoʊɡərt/ or /ˈjɒɡərt/; from Turkish: yoğurt) is a food produced by bacterial fermentation of milk. The bacteria used to make yogurt are known as yogurt cultures. Fermentation of lactose by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor. Cow's milk is commonly available worldwide and, as such, is the milk most commonly used to make yogurt. Milk from water buffalo, goats, ewes, mares, camels, and yaks is also used to produce yogurt where available locally. The milk used may be homogenized or not, even pasteurized or raw. Each type of milk produces substantially different results.</p>
+
+  {% elif other == 'cheese' %}
+    <h1>Cheese</h1>
+    <img src={{ url_for('static', filename='img/realfood/other/cheese.png') }} class="icon">
+    <p>EWWWW CHEESEEEEEE</p>
+    <p>I eat cheese, but only on pizza, please. Otherwise it smells like feet to me.</p>
+    <p>Cheese is a dairy product derived from milk that is produced in a wide range of flavors, textures, and forms by coagulation of the milk protein casein. It comprises proteins and fat from milk, usually the milk of cows, buffalo, goats, or sheep. During production, the milk is usually acidified, and adding the enzyme rennet causes coagulation. The solids are separated and pressed into final form. Some cheeses have molds on the rind, the outer layer, or throughout. Most cheeses melt at cooking temperature.</p>
+
+  {% elif other == 'eggs' %}
+    <h1>Eggs</h1>
+    <img src={{ url_for('static', filename='img/realfood/other/eggs.png') }} class="icon">
+    <p>Some eggs are laid by female animals of many different species, including birds, reptiles, amphibians, mammals, and fish, and have been eaten by humans for thousands of years. Bird and reptile eggs consist of a protective eggshell, albumen (egg white), and vitellus (egg yolk), contained within various thin membranes. The most commonly consumed eggs are chicken eggs. Other poultry eggs including those of duck and quail also are eaten. Fish eggs are called roe and caviar.</p>
+
+  {% elif other == 'beans' %}
+    <h1>Beans</h1>
+    <img src={{ url_for('static', filename='img/realfood/other/beans.png') }} class="icon">
+    <p>A bean is a seed of one of several genera of the flowering plant family Fabaceae, which are used for human or animal food.</p>
+    <p>Beans are high in protein, complex carbohydrates, folate, and iron. Beans also have significant amounts of fiber and soluble fiber, with one cup[clarification needed] of cooked beans providing between nine and 13 grams of fiber. Soluble fiber can help lower blood cholesterol.</p>
+
+  {% elif other == 'nuts' %}
+    <h1>Nuts</h1>
+    <img src={{ url_for('static', filename='img/realfood/other/nuts.png') }} class="icon">
+    <p>A nut is a fruit composed of an inedible hard shell and a seed, which is generally edible. In general usage, a wide variety of dried seeds are called nuts, but in a botanical context "nut" implies that the shell does not open to release the seed (indehiscent). The translation of "nut" in certain languages frequently requires paraphrases, as the word is ambiguous.</p>
+
+  {% elif other == 'fats' %}
+    <h1>Fats</h1>
+    <img src={{ url_for('static', filename='img/realfood/other/fats.png') }} class="icon">
+    <p>Fat is one of the three main macronutrients, along with carbohydrate and protein. Fats, also known as triglycerides, are esters of three fatty acid chains and the alcohol glycerol. The terms "lipid", "oil" and "fat" are often confused. "Lipid" is the general term, though a lipid is not necessarily a triglyceride. "Oil" normally refers to a lipid with short or unsaturated fatty acid chains that is liquid at room temperature, while "fat" (in the strict sense) may specifically refer to lipids that are solids at room temperature – however, "fat" (in the broad sense) may be used in food science as a synonym for lipid. Fats, like other lipids, are generally hydrophobic, and are soluble in organic solvents and insoluble in water.</p>
+
+  {% elif other == 'spread' %}
+    <h1>Spreads</h1>
+    <img src={{ url_for('static', filename='img/realfood/other/spreads.png') }} class="icon">
+    <p>A  spread is a food that is spread, generally with a knife, onto foods such as bread and crackers. Spreads are added to food to enhance the flavor or texture of the food, which may be considered bland without it. Butter and soft cheeses are typical spreads.</p>
+    <p>Spreads are different from dips, such as salsa, which are generally not applied to spread onto food, but have food dipped into them, instead.</p>
+
+  {% elif other == 'oil' %}
+      <h1>Oils</h1>
+      <img src={{ url_for('static', filename='img/realfood/other/oil.png') }} class="icon">
+      <p>Olive oil is a liquid fat obtained from olives (the fruit of Olea europaea; family Oleaceae), a traditional tree crop of the Mediterranean Basin. The oil is produced by pressing whole olives. It is commonly used in cooking, whether for frying or as a salad dressing. It is also used in cosmetics, pharmaceuticals, and soaps, and as a fuel for traditional oil lamps, and has additional uses in some religions. There is limited evidence of its possible health benefits. The olive is one of three core food plants in Mediterranean cuisine; the other two are wheat and grapes.</p>
+
+  {% else %}
+    <h1>Sorry, what you're looking for is not in this web, yet.</h1>
+    <h1>Or it's not in the other food.</h1>
+    <h2>Maybe you might wanna leave a message in the Contact area to let me know what food I should add?? :)</h2>
+
+  {% endif %}
+
+
+{% endblock %}}

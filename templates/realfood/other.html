@@ -1,0 +1,38 @@
+<html>
+
+  <head>
+    <title>RealFooding</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}"/>
+    <link rel='icon' href="{{ url_for('static', filename='img/favicon3.ico') }}"/>
+    <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div class="information-grid">
+      <div class="c1">
+        <a href="../">
+          <img src={{ url_for('static', filename='img/arrow.png') }} class="index">
+        </a>
+        <p class="title">Other food</p>
+      </div>
+
+      <div class="information">
+        {% block content %}
+          <h3>It's not only about proteins...</h3>
+          <p><a href="/realfood/others/wholemeal" class="ared">Wholemeal cereals and breads</a>, <a href="/realfood/vegetables/potato/" class="ared">potatoes</a>, <a href="/realfood/others/pasta/" class="ared">pasta</a> and <a href="/realfood/others/rice/" class="ared">rice</a> are the best energy providers for your body, so the more active you are the more you need.
+          3 to 5 servings a day is the recommended amount.</p>
+
+          <p><a href="/realfood/others/milk/" class="ared">Milk</a>, <a href="/realfood/others/yogurt/" class="ared">yogurt</a> and <a href="/realfood/others/cheese/" class="ared">cheese</a> provide calcium needed for healthy bones and teeth. Calcium is important during the teenage growth spurt and also for older adults. 3 servings per day or 5 if aged between 9 and 18. </p>
+
+          <p> <a href="/realfood/others/eggs/" class="ared">Eggs</a>, <a href="/realfood/others/beans/" class="ared">beans</a> and <a href="/realfood/others/nuts/" class="ared">nuts</a> provide protein for growth and tissue repair. They are also the main source of iron for healthy blood. 2 servings a day. </p>
+
+          <p> <a href="/realfood/others/fats/" class="ared">Fats</a>, <a href="/realfood/others/spread/" class="ared">spread</a> and <a href="/realfood/others/oil/" class="ared">oils</a> provide essential fats but these are only needed in very small amounts. Use as little as possible. </p>
+
+          <p>Food and drinks high in fat, sugar and salt should be avoided as they include saturated fat and promote obesity, which can lead to heart disease, type 2 diabetes and some cancers. It is recommended to not have them at all. </p>
+
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+
+</html>
