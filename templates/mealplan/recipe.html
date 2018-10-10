@@ -3,16 +3,12 @@
 
     <h1>{{ name }}</h1>
     <ul>
-      <li>{{ ingredients|length }}</li>
-      <li>{{ i_length }}</li>
-      {% set maria = 0 %}
-      <li>{{ maria }}</li>
       {% for i in ingredients %}
         <li><a href="{{i.values()[0]}}">{{ i.keys()[0] }}</a></li>
-        <li>{{ ingredients }}</li>
-        <li>mariaaaa</li>
-        {% set maria = maria + 1 %}
-        <li>{{ maria }}</li>
+        <li><a href="{{i.values()[1]}}">{{ i.keys()[1] }}</a></li>
+        <li><a href="{{i.values()[2]}}">{{ i.keys()[2] }}</a></li>
+        <li><a href="{{i.values()[3]}}">{{ i.keys()[3] }}</a></li>
+        <li><a href="{{i.values()[4]}}">{{ i.keys()[4] }}</a></li>
       {% endfor %}
     </ul>
     <p>{{ preparation }}</p>

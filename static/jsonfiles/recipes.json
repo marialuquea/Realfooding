@@ -2,11 +2,13 @@
 	"recipes": [{
 		"name": "Salmorejo",
 		"ingredients": [{
-			"one": "/vegetables/tomato",
-			"two": "2",
-			"three": "3",
-			"four": "4"
+			"6 Tomato": "/vegetables/tomato",
+			"1 Bread": "/realfood/others/wholemeal",
+			"2 spoons Olive oil": "/realfood/others/oil",
+			"1 Garlic": "/vegetables/garlic",
+			"A bit of salt": "#"
 		}],
-		"preparation": "mix them and put them in bowl"
-	}]
+		"preparation": "Peel tomatoes and garlic, and mix everything in a bowl. That's it!"
+	}
+	]
 }

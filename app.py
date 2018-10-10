@@ -138,20 +138,17 @@ def r():
 def r_search(search):
     # PRINT ONE RECIPE
     ingredients = []
-
     for r in recipes_data['recipes']:
         if r['name'].lower() == search:
             name = r['name']
             how_to_cook = r['preparation']
-            for i in r['ingredients']:
-                ingredients.append(i)
-            i_length = len(ingredients)
+            ingredients = r['ingredients']
         else:
             # 404 ERROR
             name = "Sorry, we don't have that recipe, yet"
             how_to_cook = ":("
             ingredients = []
-    return render_template('mealplan/recipe.html', name=name , preparation=how_to_cook, ingredients=ingredients, i_length=i_length)
+    return render_template('mealplan/recipe.html', name=name , preparation=how_to_cook, ingredients=ingredients)
 
 @app.route('/groceries/<option>/')
 def groceryopt(option):
