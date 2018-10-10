@@ -1,21 +1,12 @@
 {
-    "recipes": [
-        {
-            "name": "spanish tortilla",
-            "ingredients": [
-                "eggs",
-                "potatoes",
-                "olive oil"
-            ],
-            "preparation": "mix them and put them in pan"
-        },{
-            "name": "Salmorejo",
-            "ingredients": [
-                "tomatoes",
-                "bread",
-                "olive oil"
-            ],
-            "preparation": "mix them and put them in bowl"
-        }
-    ]
+	"recipes": [{
+		"name": "Salmorejo",
+		"ingredients": [{
+			"one": "/vegetables/tomato",
+			"two": "2",
+			"three": "3",
+			"four": "4"
+		}],
+		"preparation": "mix them and put them in bowl"
+	}]
 }

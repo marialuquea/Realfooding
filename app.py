@@ -4,6 +4,9 @@ app = Flask(__name__)
 recipes_data = json.load(open("static/jsonfiles/recipes.json"))
 food_data = json.load(open("static/jsonfiles/food.json"))
 
+"""
+ MAIN PAGES
+"""
 @app.route('/')
 def root():
     return render_template('index.html')
@@ -28,15 +31,44 @@ def groceries():
 def contact():
     return render_template('contact.html')
 
-
+"""
+ REAL FOOD - FRUIT
+"""
+@app.route('/fruit/')
 @app.route('/realfood/fruit/')
 def fruit():
     return render_template('realfood/fruit_layout.html')
 
+@app.route('/spring/')
+@app.route('/summer/')
+@app.route('/fruit/spring/')
+@app.route('/fruit/summer/')
+@app.route('/realfood/spring/')
+@app.route('/realfood/summer/')
 @app.route('/realfood/fruit/spring-and-summer/')
 def spring():
     return render_template('realfood/spring_fruits.html')
 
+@app.route('/fall/')
+@app.route('/winter/')
+@app.route('/realfood/fall/')
+@app.route('/realfood/winter/')
+@app.route('/realfood/fall-and-winter/')
+@app.route('/realfood/fruit/fall/')
+@app.route('/realfood/fruit/winter/')
+@app.route('/realfood/fruit/fall-and-winter/')
+def winter():
+    return render_template('realfood/winter_fruits.html')
+
+@app.route('/tropical/')
+@app.route('/fruit/tropical/')
+@app.route('/realfood/fruit/tropical/')
+def tropical():
+    return render_template('realfood/tropical_fruits.html')
+
+@app.route('/<fruit>/')
+@app.route('/realfood/<fruit>/')
+@app.route('/realfood/fruit/<fruit>/')
 @app.route('/realfood/fruit/winter/<fruit>/')
 @app.route('/realfood/fruit/fall/<fruit>/')
 @app.route('/realfood/fruit/summer/<fruit>/')
@@ -47,28 +79,24 @@ def spring():
 def s_fruits(fruit):
     return render_template('realfood/all_fruits.html', fruit=fruit)
 
-@app.route('/realfood/fruit/fall-and-winter/')
-def winter():
-    return render_template('realfood/winter_fruits.html')
-
-@app.route('/realfood/fruit/tropical/')
-def tropical():
-    return render_template('realfood/tropical_fruits.html')
-
-
+"""
+ REAL FOOD - VEGETABLES
+"""
+@app.route('/vegetables/')
 @app.route('/realfood/vegetables/')
 def vegs():
     return render_template('realfood/vegetables.html')
 
+@app.route('/vegetables/<veg>/')
 @app.route('/realfood/vegetables/<veg>/')
 def vegs2(veg):
-    for v in food_data['food']:
-        if v['name'].lower() == veg:
-            name = v['name']
-            image = v['image']
-            info = v['info']
-    return render_template('realfood/all_vegetables.html', name=name, image=image, info=info)
+    return render_template('realfood/all_vegetables.html', veg=veg)
 
+"""
+ REAL FOOD - FISH & MEAT
+"""
+@app.route('/fish/')
+@app.route('/meat/')
 @app.route('/realfood/fish/')
 @app.route('/realfood/meat/')
 @app.route('/realfood/fish-meat/')
@@ -81,6 +109,9 @@ def fm():
 def fm2(type):
     return render_template('realfood/all-fish-meat.html', type=type)
 
+"""
+ REAL FOOD - OTHERS
+"""
 @app.route('/realfood/others/')
 def other():
     return render_template('realfood/other.html')
@@ -90,7 +121,10 @@ def all_others(other):
     return render_template('realfood/all_others.html', other=other)
 
 
-
+"""
+ MEAL PLAN - RECIPES
+"""
+@app.route('/recipes/')
 @app.route('/mealplan/recipes/')
 def r():
     # PRINT ALL RECIPE NAMES
@@ -99,22 +133,25 @@ def r():
         names.append(r['name'])
     return render_template('mealplan/recipes.html', recipes=names)
 
+@app.route('/recipes/<search>/')
 @app.route('/mealplan/recipes/<search>/')
 def r_search(search):
     # PRINT ONE RECIPE
     ingredients = []
+
     for r in recipes_data['recipes']:
         if r['name'].lower() == search:
             name = r['name']
             how_to_cook = r['preparation']
             for i in r['ingredients']:
                 ingredients.append(i)
+            i_length = len(ingredients)
         else:
             # 404 ERROR
             name = "Sorry, we don't have that recipe, yet"
             how_to_cook = ":("
             ingredients = []
-    return render_template('mealplan/recipe.html', name=name , preparation=how_to_cook, ingredients=ingredients)
+    return render_template('mealplan/recipe.html', name=name , preparation=how_to_cook, ingredients=ingredients, i_length=i_length)
 
 @app.route('/groceries/<option>/')
 def groceryopt(option):

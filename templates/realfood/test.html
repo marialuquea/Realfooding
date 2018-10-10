@@ -2,11 +2,9 @@
 {% block content %}
 
 
-
-
     <h1>{{ name }}</h1>
     {{ image }}
-    <img src={{ image }} class="icon">
+    <img src={{ url_for('static', filename='/img/realfood/vegetables/{{ image }}.png') }} class="icon">
     <p>{{ info }}</p>
 
 

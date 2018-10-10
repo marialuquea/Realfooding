@@ -1,14 +1,20 @@
 {% extends "mealplan/recipes.html" %}
 {% block content %}
 
-
     <h1>{{ name }}</h1>
     <ul>
+      <li>{{ ingredients|length }}</li>
+      <li>{{ i_length }}</li>
+      {% set maria = 0 %}
+      <li>{{ maria }}</li>
       {% for i in ingredients %}
-      <li>{{ i }}</li>
+        <li><a href="{{i.values()[0]}}">{{ i.keys()[0] }}</a></li>
+        <li>{{ ingredients }}</li>
+        <li>mariaaaa</li>
+        {% set maria = maria + 1 %}
+        <li>{{ maria }}</li>
       {% endfor %}
     </ul>
     <p>{{ preparation }}</p>
-
 
 {% endblock %}}
