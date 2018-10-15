@@ -1,45 +1,8 @@
 {% extends "realfood/vegetables.html" %}
 {% block content %}
 
-  {% if veg == 'pepper' %}
-
-    <h1>Peppers</h1>
-    <img src={{ url_for('static', filename='img/realfood/vegetables/pepper.png') }} class="icon">
-    <br>
-    <p>A pickled pepper is a Capsicum pepper preserved by pickling, which usually involves submersion in a brine of vinegar and salted water with herbs and spices, including peppercorns, coriander, dill, and bay leaf.</p>
-    <p>Common pickled peppers are the banana pepper, the Cubanelle, the bell pepper, sweet and hot cherry peppers, the Hungarian wax pepper, the Greek pepper, the serrano pepper, and the jalapeño. They are often found in supermarkets alongside pickled cucumbers.</p>
-
-  {% elif veg == 'carrot' %}
-    <h1>Carrots</h1>
-    <img src={{ url_for('static', filename='img/realfood/vegetables/carrot.png') }} class="icon">
-    <p>The carrot (Daucus carota subsp. sativus) is a root vegetable, usually orange in colour, though purple, black, red, white, and yellow cultivars exist. Carrots are a domesticated form of the wild carrot, Daucus carota, native to Europe and southwestern Asia. The plant probably originated in Persia and was originally cultivated for its leaves and seeds. The most commonly eaten part of the plant is the taproot, although the stems and leaves are eaten as well. The domestic carrot has been selectively bred for its greatly enlarged, more palatable, less woody-textured taproot.</p>
-
-  {% elif veg == 'garlic' %}
-    <h1>Garlic</h1>
-    <img src={{ url_for('static', filename='img/realfood/vegetables/garlic.png') }} class="icon">
-    <p>Garlic is native to Central Asia and northeastern Iran, and has long been a common seasoning worldwide, with a history of several thousand years of human consumption and use. It was known to ancient Egyptians, and has been used both as a food flavoring and as a traditional medicine. China produces some 80% of the world supply of garlic.</p>
-
-  {% elif veg == 'onion' %}
-    <h1>Onion</h1>
-    <img src={{ url_for('static', filename='img/realfood/vegetables/onion.png') }} class="icon">
-    <p>Onions are cultivated and used around the world. As a food item, they are usually served cooked, as a vegetable or part of a prepared savoury dish, but can also be eaten raw or used to make pickles or chutneys. They are pungent when chopped and contain certain chemical substances which irritate the eyes</p>
-
-  {% elif veg == 'potato' %}
-    <h1>Potatoes</h1>
-    <img src={{ url_for('static', filename='img/realfood/vegetables/potato.png') }} class="icon">
-    <p>The potato is a starchy, tuberous crop from the perennial nightshade Solanum tuberosum. In many contexts, potato refers to the edible tuber, but it can also refer to the plant itself. Common or slang terms include tater and spud. Potatoes were introduced to Europe in the second half of the 16th century by the Spanish. Today they are a staple food in many parts of the world and an integral part of much of the world's food supply. As of 2014, potatoes were the world's fourth-largest food crop after maize (corn), wheat, and rice.</p>
-
-  {% elif veg == 'tomato' %}
-    <h1>Tomatoes</h1>
-    <img src={{ url_for('static', filename='img/realfood/vegetables/tomato.png') }} class="icon">
-    <p>The tomato is the edible, often red, berry of the nightshade Solanum lycopersicum, commonly known as a tomato plant. The species originated in western South America. The Nahuatl (Aztec language) word tomatl gave rise to the Spanish word tomate, from which the English word tomato derived. Its use as a cultivated food may have originated with the indigenous peoples of Mexico. The Spanish discovered the tomato from their contact with the Aztec during the Spanish colonization of the Americas and brought it to Europe. From there, the tomato was introduced to other parts of the European-colonized world during the 16th century.</p>
-
-  {% else %}
-    <h1>Sorry, what you're looking for is not in this web, yet.</h1>
-    <h1>Or it's not in the Tropical fruits.</h1>
-    <h2>Maybe you might wanna leave a message in the Contact area to let me know what fruits I should add?? :)</h2>
-
-  {% endif %}
-
+  <h1>{{ name }}</h1>
+  <img src="{{ image }}" class="icon">
+  <p>{{ description }}</p>
 
 {% endblock %}}

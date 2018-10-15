@@ -6,8 +6,9 @@ import codecs
 app = Flask(__name__)
 app.secret_key = os.urandom(12)
 
-recipes_data = json.load(open("static/jsonfiles/recipes.json"))
-doubts = json.load(open("static/jsonfiles/doubts.json"))
+recipes_data = json.load(open("jsonfiles/recipes.json"))
+doubts = json.load(open("jsonfiles/doubts.json"))
+fooddata = json.load(open("jsonfiles/food.json"))
 
 """
  MAIN PAGES
@@ -20,7 +21,7 @@ def root():
     else:
         print('---------------YOU ARE LOGGED IN--------------')
         login = True
-    return render_template('index.html', login = login)
+    return render_template('index.html', login=login)
 
 @app.route('/realfood/')
 def realfood():
@@ -140,7 +141,20 @@ def vegs():
 @app.route('/vegetables/<veg>/')
 @app.route('/realfood/vegetables/<veg>/')
 def vegs2(veg):
-    return render_template('realfood/all_vegetables.html', veg=veg)
+    for v in fooddata["stuff"]:
+        if v['name'].lower() == veg.lower():
+            print(veg)
+            name = v["name"]
+            image = v["image"]
+            print(v["image"])
+            description = v["description"]
+            break
+        else:
+            # 404 error
+            name = "Sorry, not found"
+            image = "error.png"
+            description = ":("
+    return render_template('realfood/all_vegetables.html', name=name, image=image, description=description)
 
 """
  REAL FOOD - FISH & MEAT
