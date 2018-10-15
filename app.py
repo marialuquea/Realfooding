@@ -1,4 +1,5 @@
 from flask import *
+import os
 app = Flask(__name__)
 
 recipes_data = json.load(open("static/jsonfiles/recipes.json"))
@@ -8,7 +9,13 @@ recipes_data = json.load(open("static/jsonfiles/recipes.json"))
 """
 @app.route('/')
 def root():
-    return render_template('index.html')
+    if not session.get('logged_in'):
+        print('---------------YOU ARE NOT LOGGED IN--------------')
+        login = False
+    else:
+        print('---------------YOU ARE LOGGED IN--------------')
+        login = True
+    return render_template('index.html', login=login)
 
 @app.route('/realfood/')
 def realfood():
@@ -29,6 +36,26 @@ def groceries():
 @app.route('/contact/')
 def contact():
     return render_template('contact.html')
+
+@app.route('/login', methods=['POST', 'GET'])
+def do_admin_login():
+    if request.method == 'GET':
+        return render_template('login.html')
+    if request.method == 'POST':
+        if request.form['password'] == '1234' and request.form['username'] == 'maria':
+            session['logged_in'] = True
+            print('---------------LOGIN SUCCESSFUL-----------------')
+            return redirect('/', code=302)
+        else:
+            print('---------------WRONG PASSWORD--------------')
+            message = 'Wrong password'
+            return render_template('login.html', message=message)
+
+@app.route("/logout")
+def logout():
+    session['logged_in'] = False
+    print('---------------You logged out--------------')
+    return redirect('/', code=302)
 
 """
  REAL FOOD - FRUIT
@@ -171,4 +198,5 @@ def groceryopt(option):
 
 
 if __name__ == "__main__":
+    app.secret_key = os.urandom(12)
     app.run(host='0.0.0.0', debug=True)

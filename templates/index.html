@@ -11,7 +11,16 @@
   <body>
 
     <div class="grid-container">
-      <div class="item1"></div>
+      <div class="item1">
+        <div class="login">
+            {% if login %}
+              <a class="awhite" href="/logout" title="don't leaveeee">Log out</a>
+            {% else %}
+              <a class="awhite" href="/login" title="Login for administrators">Login</a>
+            {% endif %}
+
+        </div>
+      </div>
       <div class="item2">  RealFooding  </div>
       <div class="item3"></div>
       <div class="item4">
