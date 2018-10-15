@@ -48,11 +48,11 @@ def contact():
         email=request.form['email']
         print (name, " ", email, " ", doubt)
         if name and doubt and email:
-            # Save the doubt
+            # Save the doubt in json file
             customer = {"questions" :{"name" : name, "email" : email, "doubt" : doubt}}
             saved.update(customer)
             print(saved)
-            with open('static/jsonfiles/doubts.json', 'w') as outfile:
+            with open('static/jsonfiles/doubts.json', 'a') as outfile:
                 json.dump(saved, outfile)
             flash('Thanks for your doubt ' + name + ' we will answer ASAP!')
         else:
@@ -222,5 +222,4 @@ def groceryopt(option):
 
 
 if __name__ == "__main__":
-
     app.run(host='0.0.0.0', debug=True)
