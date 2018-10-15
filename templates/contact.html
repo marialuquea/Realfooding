@@ -34,8 +34,8 @@
             {% endif %}
         {% endwith %}
 
-        <form action="" method="post" role="form">
-          {{ form.csrf }}
+        <form action="" name="contactform" enctype="multipart/form-data" method="POST">
+
           <label for="name">Name:</label> <br>
           <input class="ctype" type="text" name="name" placeholder="What's your name?">
           <br>

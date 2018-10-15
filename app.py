@@ -1,5 +1,4 @@
 from flask import *
-from wtforms import *
 import os
 import json
 import codecs
@@ -21,7 +20,7 @@ def root():
     else:
         print('---------------YOU ARE LOGGED IN--------------')
         login = True
-    return render_template('index.html', login=login)
+    return render_template('index.html', login = login)
 
 @app.route('/realfood/')
 def realfood():
@@ -39,43 +38,27 @@ def mealplan():
 def groceries():
     return render_template('groceries.html')
 
-class ReusableForm(Form):
-    name = TextField('Name:', validators=[validators.required()])
-    email = TextField('Email:', validators=[validators.required()])
-    doubt = TextField('Doubt:', validators=[validators.required()])
 
-@app.route('/contact/', methods=['GET', 'POST'])
+@app.route('/contact/', methods=['POST', 'GET'])
 def contact():
-    form = ReusableForm(request.form)
-
-    customers = doubts
-
-
+    saved = doubts
     if request.method == 'POST':
         name=request.form['name']
         doubt=request.form['doubt']
         email=request.form['email']
         print (name, " ", email, " ", doubt)
-
-        if form.validate():
-            # Save the comment here.
-
+        if name and doubt and email:
+            # Save the doubt
             customer = {"questions" :{"name" : name, "email" : email, "doubt" : doubt}}
-
-            print(type(customers))
-
-            customers.update(customer)
-
-            print(customers)
-
-            with open('static/jsonfiles/doubts.json', 'w') as file:
-                json.dump(customers, file)
-
+            saved.update(customer)
+            print(saved)
+            with open('static/jsonfiles/doubts.json', 'w') as outfile:
+                json.dump(saved, outfile)
             flash('Thanks for your doubt ' + name + ' we will answer ASAP!')
         else:
             flash('Please fill all parts.')
+    return render_template('contact.html')
 
-    return render_template('contact.html', form=form)
 
 @app.route('/login', methods=['POST', 'GET'])
 def do_admin_login():
@@ -90,6 +73,7 @@ def do_admin_login():
             print('---------------WRONG PASSWORD--------------')
             message = 'Wrong password'
             return render_template('login.html', message=message)
+
 
 @app.route("/logout")
 def logout():
