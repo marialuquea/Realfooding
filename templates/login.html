@@ -5,35 +5,32 @@
 <p>You're logged in already!</p>
 {% else %}
 
+    <form action="/login" method="POST">
+    		<div class="login_everything">
+    			<div class="login_title">
+    				<h1>Login</h1>
+    			</div>
 
-<form action="/login" method="POST">
-	<div>
-		<div>
-			<div>
-				<h1>Login</h1>
-			</div>
+					{% if message %}
+			 			<p class="messages">{{ message }}</p>
+		 			{% endif %}
 
-      {% if message %}
-        <p>{{ message }}</p>
-      {% endif %}
+    			<div>
+    				<div>
+    				<input class="logintype" type="text" value="" placeholder="username" name="username">
+						<label for="login-name"></label>
+    				</div>
 
-			<div>
-				<div>
-				<input type="text" value="" placeholder="username" name="username">
-				<label for="login-name"></label>
-				</div>
+    				<div >
+    				<input class="logintype" type="password" value="" placeholder="password" name="password">
+						<label for="login-pass"></label>
+						</div>
 
-				<div >
-				<input type="password" value="" placeholder="password" name="password">
-				<label for="login-pass"></label>
-				</div>
-
-        <input type="submit" value="Log in">
-			  <br>
-			</div>
-		</div>
-	</div>
-</form>
+            <input class="button" type="submit" value="Log in">
+    			  <br>
+    			</div>
+    		</div>
+    </form>
 
 {% endif %}
 {% endblock %}

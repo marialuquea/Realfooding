@@ -41,9 +41,6 @@ span {
   color: lightblue;
 }
 
-
-
-
 .item1, .item2, .item3, .item4, .item6, .item7, .item9, .item10, .item12, .item13, .item14, .item15, .item16{
   display: flex;
   justify-content: center;
@@ -56,27 +53,6 @@ span {
   color: #d32f2c;
   padding: 10px;
 }
-.login-box{
-  background: rgba(255, 255, 255, 0.9);
-  padding: 50px;
-  border-radius: 5px;
-  position: fixed;
-  top: 40%;
-  left: 45%;
-  margin-top: -50px;
-  margin-left: -100px;
-}
-.app-title {
-text-align: center;
-color: #d32f2c
-}
-.login-form {
-text-align: center;
-}
-.control-group {
-margin-bottom: 10px;
-}
-
 .item1{
   justify-content: flex-start;
   align-items: flex-start;
@@ -115,6 +91,36 @@ margin-bottom: 10px;
 }
 
 /* LOGIN PAGE */
+.login_everything{
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 40px;
+}
+.login_title{
+  color: #d32f2c;
+  font-size: 30px;
+}
+.logintype{
+  height: 30px;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+.button {
+  height: 38px;
+  padding: 0 30px;
+  line-height: 38px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #d32f2c;
+  border: 2px solid #d32f2c;
+  font-family: inherit;
+  color: white;
+}
+.button:hover{ background-color: Transparent; color: #d32f2c}
+.messages{
+  color: #d32f2c;
+}
 
 
 /* REAL FOOD PAGE*/
@@ -229,6 +235,12 @@ margin-bottom: 10px;
   margin: 20px 40px;
 }
 
+.login_container{
+  font-size: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 35% 40px;
+}
+
 .ctype {
   height: 40px;
   display: table-cell;
@@ -236,7 +248,8 @@ margin-bottom: 10px;
   border-radius: 5px;
 }
 form {
-  width: 50%;
+  width: 300px;
+	margin: 100px auto;
 }
 button {
   height: 38px;
