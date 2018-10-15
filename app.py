@@ -1,6 +1,7 @@
 from flask import *
 import os
 app = Flask(__name__)
+app.secret_key = os.urandom(12)
 
 recipes_data = json.load(open("static/jsonfiles/recipes.json"))
 
@@ -198,5 +199,5 @@ def groceryopt(option):
 
 
 if __name__ == "__main__":
-    app.secret_key = os.urandom(12)
+
     app.run(host='0.0.0.0', debug=True)
