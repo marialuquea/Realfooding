@@ -10,7 +10,7 @@
   <body>
     <div class="information-grid">
       <div class="c1">
-        <a href="../">
+        <a class="ared" href="../">
           <img src={{ url_for('static', filename='img/arrow.png') }} class="index">
         </a>
         <p class="title"> Grocery Shopping </p>
@@ -21,12 +21,62 @@
           <h1>{{ option.upper() }}</h1>
 
           {% if option == 'breakfast' %}
-            <h2>Breakfast</h2>
 
-          {% elif option == 'sport' %}
-            <h2></h2>
+          <p>For years, nutrition experts have said that a healthy breakfast is a key start to the day. Not only do we think and perform better on the job, they tell us, it supports our well-being in many other ways.</p>
 
-          {% elif option == 'events' %}
+          Some healthy breakfast ideas:
+          <ul>
+            <li> <a class="ared" href="/recipes/sticky cinnamon fig and yogurt breakfast bowls">Sticky cinnamon fig & yogurt breakfast bowls</a> </li>
+            <li> <a class="ared" href="/recipes/toasts/">Extra virgin olive oil, tomato and ham toast and 1 piece of fruit</a> </li>
+            <li> <a class="ared" href="/recipes/granola and fruit yogurt/">Yogurt with Granola and plum and pear pieces</a> </li>
+            <li> <a class="ared" href="/recipes/fruit porridge">Porridge oats with milk, apple pieces, cranberries and cinnamon</a> </li>
+            <li> <a class="ared" href="/recipes/avocado smoothie with cocoa, almond milk and honey">Avocado smoothie with cocoa, almond milk and honey.</a> </li>
+          </ul>
+
+          {% elif option == 'lunch' %}
+
+          <p>From vibrant salads and hearty soups to veg-packed wraps, we've got plenty of healthy lunch ideas to keep your midday eating on the right track.</p>
+
+          <ul>
+            <li> <a class="ared" href="/recipes/salmorejo">Salmorejo</a> </li>
+            <li> <a class="ared" href="/recipes/spanish tortilla">Spanish Tortilla</a> </li>
+            <li> <a class="ared" href="/recipes/nachos">Beef nachos</a> </li>
+            <li> <a class="ared" href="/recipes/lentil soup">Lentil soup</a> </li>
+            <li> <a class="ared" href="/recipes/blt wrap">BLT wrap</a> </li>
+          </ul>
+
+          {% elif option == 'dinner' %}
+          <p>Your dinner should never lack planning. Even if you are just grabbing a quick meal at night, you should plan in advance to have some healthful and tasty food around for that quick meal.</p>
+          <p>You should aim to have at least 3 different kinds of food in your plate or bowl.</p>
+
+          <ul>
+            <li> <a class="ared" href="/recipes/cucumber, pea and lettuce soup">Cucumber, pea & lettuce salad</a> </li>
+            <li> <a class="ared" href="/recipes/pasta salad">Pasta salad</a> </li>
+            <li> <a class="ared" href="/recipes/chicken with tomato and avocado toast">Chicken with tomato & avocado toast</a> </li>
+            <li> <a class="ared" href="/recipes/greek style roast fish">Greek style roast fish</a> </li>
+            <li> <a class="ared" href="/recipes/curried cod">Curried cod</a> </li>
+          </ul>
+
+          {% elif option == 'snacks' %}
+          <h3>Snacks are the best thing in the world.</h3>
+          <h4>Why?</h4>
+          <p>Reasons:</p>
+          <ol>
+            <li>Eating every few hours is the key to keeping your blood sugar stable.</li>
+            <li>Snacks are an opportunity to fuel the body with important and essential nutrients.</li>
+            <li>A healthy snack actually keeps your weight down.</li>
+            <li>Hangry… Need I say more?</li>
+            <li>It’s a stress-free time to take for yourself.</li>
+          </ol>
+          <br>
+          <p>Snack ideas</p>
+          <ul>
+            <li> <a class="ared" href="#">Carrot sticks</a> and <a class="ared" href="#">cherry tomatoes</a> </li>
+            <li> <a class="ared" href="/recipes/chicken with tomato and avocado toast">Cereal bread sandwich with chicken and tomato</a> </li>
+            <li> <a class="ared" href="#">Banana</a> and <a class="ared" href="#">peach</a> smoothie </li>
+            <li> <a class="ared" href="/recipes/granola and fruit yogurt">Yogurt with berries or granola or nuts</a> </li>
+            <li> <a class="ared" href="#">Cashews</a> and <a class="ared" href="#">grapes</a> </li>
+          </ul>
 
           {% endif %}
 

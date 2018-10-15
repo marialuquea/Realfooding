@@ -2,7 +2,6 @@ from flask import *
 app = Flask(__name__)
 
 recipes_data = json.load(open("static/jsonfiles/recipes.json"))
-food_data = json.load(open("static/jsonfiles/food.json"))
 
 """
  MAIN PAGES

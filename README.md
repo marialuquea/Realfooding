@@ -15,14 +15,17 @@
 
 To do:
 - [X] 404 page
-- [ ] canva index circles
+- [X] canva index circles
 - [ ] sausages
 - [ ] bacon
 - [ ] ham
 - [ ] salami
+- [ ] fig
+- [ ] granola 
 - [ ] pates
-- [ ] balanced diet
+- [X] balanced diet
 - [ ] water
 - [ ] download pyramid
 - [ ] recipes in food
-- [ ] add more recipes
+- [ ] add more recipes only if you are an admin
+- [ ] add login for admin
