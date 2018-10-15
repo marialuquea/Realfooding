@@ -14,7 +14,7 @@
 ![Screenshot](screenshot.png)
 
 To do:
-- [ ] 404 page
+- [X] 404 page
 - [ ] canva index circles
 - [ ] sausages
 - [ ] bacon
@@ -24,3 +24,5 @@ To do:
 - [ ] balanced diet
 - [ ] water
 - [ ] download pyramid
+- [ ] recipes in food
+- [ ] add more recipes

@@ -13,20 +13,22 @@
         <a href="../">
           <img src={{ url_for('static', filename='img/arrow.png') }} class="index">
         </a>
-        <p class="title"> Recipes </p>
+        <p class="title"> Grocery Shopping </p>
       </div>
 
       <div class="information">
         {% block content %}
+          <h1>{{ option.upper() }}</h1>
 
-          <h1>Here you have the most delicious, easy and healthy recipes you'll ever find</h1>
+          {% if option == 'breakfast' %}
+            <h2>Breakfast</h2>
 
-          <ul>
-            {% for r in recipes %}
-            <li> <a href="/recipes/{{ r }}" class="ared"> {{ r }} </a></li>
-            {% endfor %}
-          </ul>
+          {% elif option == 'sport' %}
+            <h2></h2>
 
+          {% elif option == 'events' %}
+
+          {% endif %}
 
          {% endblock %}
       </div>

@@ -9,6 +9,22 @@
 			"A bit of salt": "#"
 		}],
 		"preparation": "Peel tomatoes and garlic, and mix everything in a bowl. That's it!"
+	},{
+		"name": "food2",
+		"ingredients": [{
+			"6 Tomato": "/vegetables/tomato",
+			"1 Bread": "/realfood/others/wholemeal"
+		}],
+		"preparation": "Peel tomatoes and garlic, and mix everything in a bowl. That's it!"
+	},{
+		"name": "Spanish tortilla",
+		"ingredients": [{
+			"2 eggs": "/realfood/others/eggs",
+			"1 onion": "/vegetables/onion",
+			"A bit of salt": "#",
+			"5 small potatoes": "/vegetables/potato"
+		}],
+		"preparation": "Peel tomatoes and garlic, and mix everything in a bowl. That's it!"
 	}
 	]
 }
