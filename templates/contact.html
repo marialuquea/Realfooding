@@ -19,6 +19,23 @@
 
       <div class="c2">
 
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+
+        {% for message in messages %}
+            {% if "Error" not in message[1]: %}
+                <p class="messages">{{ message[1] }}</p>
+            {% endif %}
+
+            {% if "Error" in message[1]: %}
+                {{ message[1] }}
+            {% endif %}
+        {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form action="" method="post" role="form">
+          {{ form.csrf }}
           <label for="name">Name:</label> <br>
           <input class="ctype" type="text" name="name" placeholder="What's your name?">
           <br>
@@ -26,9 +43,13 @@
           <input class="ctype" type="text" name="email" placeholder="Your email will be used to contact you.">
           <br>
           <label for="textarea">Doubt:</label> <br>
-          <input class="ctype" type="text" name="textarea" placeholder="What would you like to ask?">
+          <input class="ctype" type="text" name="doubt" placeholder="What would you like to ask?">
           <br>
           <button type="submit">Send</button>
+
+          <br>
+
+        </form>
 
       </div>
     </div>

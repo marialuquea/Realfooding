@@ -218,7 +218,6 @@ span {
 .c_container {
     display: grid;
     grid-template-rows: 20% 80%;
-    height: 100vh;
     color: #d32f2c;
 }
 .c1 {
@@ -233,6 +232,7 @@ span {
   width: 600px;
   margin: 20px auto;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .login_container{
@@ -249,7 +249,7 @@ span {
 }
 form {
   width: 300px;
-	margin: 100px auto;
+	margin: 10px;
 }
 button {
   height: 38px;
