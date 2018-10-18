@@ -17,41 +17,54 @@
         <p class="title"> Contact </p>
       </div>
 
-      <div class="c2">
+        <div class="c2">
 
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
+          {% if login %}
+            <p>Hello Maria!</p>
 
-        {% for message in messages %}
-            {% if "Error" not in message[1]: %}
-                <p class="messages">{{ message[1] }}</p>
-            {% endif %}
+            <ul>
+              {% for x in doubt %}
+              <li>{{ doubt[x]['name']+', '+doubt[x]['email']+', '+doubt[x]['doubt']}}</li>
+              {% endfor %}
+            </ul>
 
-            {% if "Error" in message[1]: %}
-                {{ message[1] }}
-            {% endif %}
-        {% endfor %}
-            {% endif %}
-        {% endwith %}
+          {% else %}
 
-        <form action="" name="contactform" enctype="multipart/form-data" method="POST">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
 
-          <label for="name">Name:</label> <br>
-          <input class="ctype" type="text" name="name" placeholder="What's your name?">
-          <br>
-          <label for="email">Email:</label> <br>
-          <input class="ctype" type="text" name="email" placeholder="Your email will be used to contact you.">
-          <br>
-          <label for="textarea">Doubt:</label> <br>
-          <input class="ctype" type="text" name="doubt" placeholder="What would you like to ask?">
-          <br>
-          <button type="submit">Send</button>
+            {% for message in messages %}
+                {% if "Error" not in message[1]: %}
+                    <p class="messages">{{ message[1] }}</p>
+                {% endif %}
 
-          <br>
+                {% if "Error" in message[1]: %}
+                    {{ message[1] }}
+                {% endif %}
+            {% endfor %}
+                {% endif %}
+            {% endwith %}
 
-        </form>
+            <form action="" name="contactform" enctype="multipart/form-data" method="POST">
 
-      </div>
+              <label for="name">Name:</label> <br>
+              <input class="ctype" type="text" name="name" placeholder="What's your name?">
+              <br>
+              <label for="email">Email:</label> <br>
+              <input class="ctype" type="text" name="email" placeholder="Your email will be used to contact you.">
+              <br>
+              <label for="textarea">Doubt:</label> <br>
+              <input class="ctype" type="text" name="doubt" placeholder="What would you like to ask?">
+              <br>
+              <button type="submit">Send</button>
+
+              <br>
+
+            </form>
+
+          {% endif %}
+        </div>
+
     </div>
   </body>
 

@@ -39,27 +39,39 @@ def mealplan():
 def groceries():
     return render_template('groceries.html')
 
-
+def generateID(fileName):
+    file = json.load(open("jsonfiles/" + fileName))
+    max = 0
+    for x in file:
+        tempX = int(x)
+        if tempX > max:
+            max = tempX
+    max += 1
+    return str(max)
+    
 @app.route('/contact/', methods=['POST', 'GET'])
 def contact():
-    saved = doubts
-    if request.method == 'POST':
-        name=request.form['name']
-        doubt=request.form['doubt']
-        email=request.form['email']
-        print (name, " ", email, " ", doubt)
-        if name and doubt and email:
-            # Save the doubt in json file
-            customer = {"questions" :{"name" : name, "email" : email, "doubt" : doubt}}
-            saved.update(customer)
-            print(saved)
-            with open('static/jsonfiles/doubts.json', 'a') as outfile:
-                json.dump(saved, outfile)
-            flash('Thanks for your doubt ' + name + ' we will answer ASAP!')
-        else:
-            flash('Please fill all parts.')
-    return render_template('contact.html')
-
+    if not session.get('logged_in'):
+        login = False
+        if request.method == 'POST':
+            name=request.form['name']
+            doubt=request.form['doubt']
+            email=request.form['email']
+            print (name, " ", email, " ", doubt)
+            if name and doubt and email:
+                # Save the doubt in json file
+                newID = generateID('doubts.json')
+                customer = {newID: {"name" : name, "email" : email, "doubt" : doubt}}
+                doubts.update(customer)
+                print(doubts)
+                with open('jsonfiles/doubts.json', 'w') as outfile:
+                    json.dump(doubts, outfile)
+                flash('Thanks for your doubt ' + name + ' we will answer ASAP!')
+            else:
+                flash('Please fill all parts.')
+    else:
+        login = True
+    return render_template('contact.html', doubt=doubts, login=login)
 
 @app.route('/login', methods=['POST', 'GET'])
 def do_admin_login():
