@@ -28,4 +28,5 @@ To do:
 - [ ] download pyramid
 - [ ] recipes in food
 - [ ] add more recipes only if you are an admin
-- [ ] add login for admin
+- [X] add login for admin
+- [X] see doubts only if you are an admin
