@@ -48,7 +48,23 @@ def generateID(fileName):
             max = tempX
     max += 1
     return str(max)
-    
+
+def findFood(search):
+    for x in fooddata['stuff']:
+        if x['name'].lower() == search.lower():
+            name = x["name"]
+            image = x["image"]
+            description = x["description"]
+            type = x['type']
+            break
+        else:
+            # 404 error
+            name = "Sorry, not found"
+            image = "/static/img/error.png"
+            description = "This is the person to blame."
+            type = ""
+    return (name, image, description, type)
+
 @app.route('/contact/', methods=['POST', 'GET'])
 def contact():
     if not session.get('logged_in'):
@@ -140,7 +156,8 @@ def tropical():
 @app.route('/realfood/fruit/fall-and-winter/<fruit>/')
 @app.route('/realfood/fruit/tropical/<fruit>/')
 def s_fruits(fruit):
-    return render_template('realfood/all_fruits.html', fruit=fruit)
+    name, image, description, type = findFood(fruit)
+    return render_template('realfood/foodies.html', name=name, image=image, description=description, type=type)
 
 """
  REAL FOOD - VEGETABLES
@@ -153,20 +170,8 @@ def vegs():
 @app.route('/vegetables/<veg>/')
 @app.route('/realfood/vegetables/<veg>/')
 def vegs2(veg):
-    for v in fooddata["stuff"]:
-        if v['name'].lower() == veg.lower():
-            print(veg)
-            name = v["name"]
-            image = v["image"]
-            print(v["image"])
-            description = v["description"]
-            break
-        else:
-            # 404 error
-            name = "Sorry, not found"
-            image = "error.png"
-            description = ":("
-    return render_template('realfood/all_vegetables.html', name=name, image=image, description=description)
+    name, image, description, type = findFood(veg)
+    return render_template('realfood/foodies.html', name=name, image=image, description=description, type=type)
 
 """
  REAL FOOD - FISH & MEAT
@@ -179,11 +184,12 @@ def vegs2(veg):
 def fm():
     return render_template('realfood/fish-meat.html')
 
-@app.route('/realfood/fish/<type>/')
-@app.route('/realfood/meat/<type>/')
-@app.route('/realfood/fish-meat/<type>/')
-def fm2(type):
-    return render_template('realfood/all-fish-meat.html', type=type)
+@app.route('/realfood/fish/<hello>/')
+@app.route('/realfood/meat/<hello>/')
+@app.route('/realfood/fish-meat/<hello>/')
+def fm2(hello):
+    name, image, description, type = findFood(hello)
+    return render_template('realfood/foodies.html', name=name, image=image, description=description, type=type)
 
 """
  REAL FOOD - OTHERS
@@ -194,7 +200,8 @@ def other():
 
 @app.route('/realfood/others/<other>/')
 def all_others(other):
-    return render_template('realfood/all_others.html', other=other)
+    name, image, description, type = findFood(other)
+    return render_template('realfood/foodies.html', name=name, image=image, description=description, type=type)
 
 
 """
@@ -203,11 +210,15 @@ def all_others(other):
 @app.route('/recipes/')
 @app.route('/mealplan/recipes/')
 def r():
+    if not session.get('logged_in'):
+        login = False
+    else:
+        login = True
     # PRINT ALL RECIPE NAMES
     names = []
     for r in recipes_data['recipes']:
         names.append(r['name'])
-    return render_template('mealplan/recipes.html', recipes=names)
+    return render_template('mealplan/recipes.html', recipes=names, login=login)
 
 @app.route('/recipes/<search>/')
 @app.route('/mealplan/recipes/<search>/')
@@ -245,6 +256,10 @@ def groceryopt(option):
         return render_template('groceries/grocery_shop.html', option=option)
     else:
         return render_template('404error.html')
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404error.html'), 404
 
 
 if __name__ == "__main__":

@@ -15,9 +15,9 @@
 		"ingredients": [{
 			"1 bag of tortilla chips": "",
 			"Beef mince": "/realfood/meat/beef/",
-			"1 can of beans in tomato sauce":"",
+			"1 can of beans in tomato sauce":"/realfood/vegetables/tomato/",
 			"1 bag of seasoning powder":"",
-			"1 bag of gratinated cheese":""
+			"1 bag of gratinated cheese":"/realfood/others/cheese/"
 		}],
 		"preparation": "Preheat oven to 200C. Heat oil in a non-stick frying pan over medium heat. Cook onion for 2 minutes, or until soft. Add mince. Cook, stirring with a wooden spoon, for 5 minutes or until browned. Add kidney beans, chilli powder, seasoning, tomato paste and water. Reduce heat to medium-low. Simmer for 5 minutes, or until thick. Stir through coriander. Arrange corn chips on a heatproof plate. Top with mince. Sprinkle with cheese. Bake for 15 minutes, or until hot. Top with salsa, avocado and sour cream. Serve."
 	},

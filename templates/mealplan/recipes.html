@@ -27,7 +27,10 @@
             {% endfor %}
           </ul>
 
-
+          {% if login %}
+            <button type="button" name="button">Add recipe</button>
+          {% endif%}
+          
          {% endblock %}
       </div>
     </div>

@@ -21,7 +21,7 @@ To do:
 - [ ] ham
 - [ ] salami
 - [ ] fig
-- [ ] granola 
+- [ ] granola
 - [ ] pates
 - [X] balanced diet
 - [ ] water
@@ -30,3 +30,4 @@ To do:
 - [ ] add more recipes only if you are an admin
 - [X] add login for admin
 - [X] see doubts only if you are an admin
+- [X] error.png

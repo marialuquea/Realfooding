@@ -1,36 +1,53 @@
 <link rel="stylesheet" href="/static/css/design.css" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
 {% block body %}
-{% if session['logged_in'] %}
-<p>You're logged in already!</p>
-{% else %}
 
-    <form action="/login" method="POST">
-    		<div class="login_everything">
-    			<div class="login_title">
-    				<h1>Login</h1>
-    			</div>
+<div class="c_container">
+  <div class="c1">
+    <a href="/">
+      <img src={{ url_for('static', filename='img/arrow.png') }} class="index">
+    </a>
+    <p class="title"> Login </p>
+  </div>
 
-					{% if message %}
-			 			<p class="messages">{{ message }}</p>
-		 			{% endif %}
+    <div class="c2">
 
-    			<div>
-    				<div>
-    				<input class="logintype" type="text" value="" placeholder="username" name="username">
-						<label for="login-name"></label>
-    				</div>
+      <!-- IF ADMIN IS LOGGED IN -->
+      {% if session['logged_in'] %}
+        <p>You're logged in already!</p>
+      {% else %}
 
-    				<div >
-    				<input class="logintype" type="password" value="" placeholder="password" name="password">
-						<label for="login-pass"></label>
-						</div>
 
-            <input class="button" type="submit" value="Log in">
-    			  <br>
-    			</div>
-    		</div>
-    </form>
+        <form action="/login" method="POST">
+              <div class="login_title">
+                <h1>Login for admin</h1>
+              </div>
+
+              {% if message %}
+                <p class="messages">{{ message }}</p>
+              {% endif %}
+
+              <div>
+                <div>
+                <input class="ctype" type="text" value="" placeholder="username" name="username">
+                <label for="login-name"></label>
+                </div>
+
+                <div >
+                <input class="ctype" type="password" value="" placeholder="password" name="password">
+                <label for="login-pass"></label>
+                </div>
+
+                <button type="submit">Log in</button>
+                <br>
+              </div>
+
+        </form>
+
+
+    </div>
+
+</div>
 
 {% endif %}
 {% endblock %}
