@@ -16,10 +16,8 @@ fooddata = json.load(open("jsonfiles/food.json"))
 @app.route('/')
 def root():
     if not session.get('logged_in'):
-        print('---------------YOU ARE NOT LOGGED IN--------------')
         login = False
     else:
-        print('---------------YOU ARE LOGGED IN--------------')
         login = True
     return render_template('index.html', login=login)
 
