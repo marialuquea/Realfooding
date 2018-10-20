@@ -16,18 +16,11 @@
 To do:
 - [X] 404 page
 - [X] canva index circles
-- [ ] sausages
-- [ ] bacon
-- [ ] ham
-- [ ] salami
-- [ ] fig
-- [ ] granola
-- [ ] pates
 - [X] balanced diet
 - [ ] water
-- [ ] download pyramid
-- [ ] recipes in food
-- [ ] add more recipes only if you are an admin
+- [X] download pyramid
+- [X] recipes in food
+- [X] add more recipes only if you are an admin
 - [X] add login for admin
 - [X] see doubts only if you are an admin
 - [X] error.png
