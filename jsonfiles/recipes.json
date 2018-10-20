@@ -6,17 +6,17 @@
 			"1 Bread": "/realfood/others/wholemeal",
 			"2 spoons Olive oil": "/realfood/others/oil",
 			"1 Garlic": "/vegetables/garlic",
-			"A bit of salt": "#"
+			"A bit of salt": "/oops/"
 		}],
 		"preparation": "Peel tomatoes and garlic, and mix everything in a bowl. That's it!"
 	},
 	{
 		"name": "Nachos",
 		"ingredients": [{
-			"1 bag of tortilla chips": "",
+			"1 bag of tortilla chips": "/oops/",
 			"Beef mince": "/realfood/meat/beef/",
-			"1 can of beans in tomato sauce":"/realfood/vegetables/tomato/",
-			"1 bag of seasoning powder":"",
+			"1 can of beans in tomato sauce":"/realfood/others/beans/",
+			"1 bag of seasoning powder":"/oops/",
 			"1 bag of gratinated cheese":"/realfood/others/cheese/"
 		}],
 		"preparation": "Preheat oven to 200C. Heat oil in a non-stick frying pan over medium heat. Cook onion for 2 minutes, or until soft. Add mince. Cook, stirring with a wooden spoon, for 5 minutes or until browned. Add kidney beans, chilli powder, seasoning, tomato paste and water. Reduce heat to medium-low. Simmer for 5 minutes, or until thick. Stir through coriander. Arrange corn chips on a heatproof plate. Top with mince. Sprinkle with cheese. Bake for 15 minutes, or until hot. Top with salsa, avocado and sour cream. Serve."
@@ -26,7 +26,7 @@
 		"ingredients": [{
 			"2 eggs": "/realfood/others/eggs",
 			"1 onion": "/vegetables/onion",
-			"A bit of salt": "#",
+			"A bit of salt": "/oops/",
 			"5 small potatoes": "/vegetables/potato"
 		}],
 		"preparation": "Peel tomatoes and garlic, and mix everything in a bowl. That's it!"
@@ -35,8 +35,8 @@
 		"name": "Sticky cinnamon fig and yogurt breakfast bowls",
 		"ingredients": [{
 			"1 fig": "/fruit/",
-			"A bit of cinammon": "",
-			"Yogurt": ""
+			"A bit of cinammon": "/oops/",
+			"Yogurt": "/realfood/others/yogurt"
 		}],
 		"preparation": "Mix them all together in a bowl! Super easy :)"
 	},
@@ -46,14 +46,14 @@
 			"2 slices of bread": "/realfood/others/wholemeal/",
 			"1 small tomato": "/realfood/vegetables/tomato/",
 			"Extra virgin olive oil": "/realfood/others/oil/",
-			"Ham slices": ""
+			"Ham slices": "/realfood/meat/pork/"
 		}],
 		"preparation": "Toast the bread slices in the toaster. Pour a bit of olive oil on it. Cut the tomato in thin slices, put them on the toast, and a slice of ham on top. Enjoy!"
 	},
 	{
 		"name": "Granola and fruit yogurt",
 		"ingredients": [{
-			"Granola": "",
+			"Granola": "/oops/",
 			"Fat free yogurt": "/realfood/others/yogurt/",
 			"Berries": "/berries/"
 		}],
@@ -62,10 +62,10 @@
 	{
 		"name": "Fruit porridge",
 		"ingredients": [{
-			"Porridge oats": "",
+			"Porridge oats": "/oops/",
 			"Skimmed Milk": "/realfood/others/milk/",
-			"Apple pieces": "",
-			"1 Plum": "",
+			"Apple pieces": "/apple/",
+			"1 Plum": "/oops/",
 			"cranberries":"/berries/"
 		}],
 		"preparation": "Boil water, pour into a bowl with porridge oats. Wait 5 minutes and add the fruit."
@@ -75,44 +75,44 @@
 		"ingredients": [{
 			"1 Avocado": "/avocado/",
 			"Almond milk": "/realfood/others/milk/",
-			"Honey": ""
+			"Honey": "/oops/"
 		}],
 		"preparation": "Peel the avocado, mix everything with a blender and drink :)"
 	},
 	{
 		"name": "Fresh salmon with Thai noodle salad",
 		"ingredients": [{
-			"2 skinless salmon fillets": "",
-			"1 large orange": "",
-			"125g French beans, trimmed and halved": "",
-			"50g mange tout, shredded": "",
-			"75g frozen peas": "",
-			"75g vermicelli rice noodles": "",
-			"2 tsp red curry sauce": "",
-			"1 tsp fish sauce": "",
-			"3 spring onions, finely chopped": "",
-			"a pack of basil or coriander, chopped": ""
+			"2 skinless salmon fillets": "/realfood/fish/salmon/",
+			"1 large orange": "/oops/",
+			"125g French beans, trimmed and halved": "/realfood/others/beans",
+			"50g mange tout, shredded": "/realfood/fish/",
+			"75g frozen peas": "/oops/",
+			"75g vermicelli rice noodles": "/realfood/others/pasta/",
+			"2 tsp red curry sauce": "/oops/",
+			"1 tsp fish sauce": "/realfood/fish/",
+			"3 spring onions, finely chopped": "/realfood/vegetables/onion/",
+			"a pack of basil or coriander, chopped": "/oops/"
 		}],
 		"preparation": "Put a pan of water on to boil. Line a steamer with baking parchment, add the salmon fillets and scatter with a little of the orange zest. When the water is boiling, add the beans to the pan, put the salmon in the steamer on top and cook for 5 mins. Take the salmon off, and if it is cooked, set aside but add the peas and mange tout to the pan and cook for 1 min more, or if not quite cooked leave on top for the extra min. Drain the veg, but return the boiling water to the pan, add the noodles and leave to soak for 5 mins. Put the curry paste and fish sauce in a salad bowl with the orange juice and a little of the remaining zest and the spring onions. Drain the noodles when they are ready and add to the salad bowl, toss well, then add the chopped orange with the basil or coriander and the cooked vegetables. Tip in the juice from the fish, then toss well and serve in bowls with the salmon on top."
 	},
 	{
 		"name": "Lentil soup",
 		"ingredients": [{
-			"lentils": "",
-			"a quarter of a pepper": "",
-			"1 tomato":"",
-			"1 garlic":"",
-			"4 potatoes":"",
-			"5 carrots":""
+			"lentils": "/realfood/others/beans",
+			"a quarter of a pepper": "/oops/",
+			"1 tomato":"/realfood/vegetables/tomato/",
+			"1 garlic":"/realfood/vegetables/garlic/",
+			"4 potatoes":"/realfood/vegetables/potato/",
+			"5 carrots":"/realfood/vegetables/carrot/"
 		}],
 		"preparation": "Boil them all together in a bowl for 20 mins."
 	},
 	{
 		"name": "BLT wrap",
 		"ingredients": [{
-			"wraps": "",
-			"bacon": "",
-			"lettuce":"",
+			"wraps": "/realfood/others/wholemeal/",
+			"bacon": "/realfood/meat/pork/",
+			"lettuce":"/oops/",
 			"tomato":"/realfood/vegetables/tomato"
 		}],
 		"preparation": "Grill or fry two slices of bacon per pack instructions. If you’re super lazy you can actually buy ready cooked bacon. Meanwhile, slice up the tomato. On a wrap, layout the lettuce lengthways across the middle, top with the tomato then the bacon."
@@ -120,57 +120,57 @@
 	{
 		"name": "Cucumber, pea and lettuce soup",
 		"ingredients": [{
-			"Olive oil": "",
-			"Onions, roughly chopped": "",
-			"1 cucumber":"",
-			"1 large round lettuce, roughly chopped":"",
-			"225g frozen peas":""
+			"Olive oil": "/realfood/others/oil",
+			"Onions, roughly chopped": "/realfood/vegetables/onion/",
+			"1 cucumber":"/oops/",
+			"1 large round lettuce, roughly chopped":"/oops/",
+			"225g frozen peas":"/oops/"
 		}],
 		"preparation": "Boil 1.4 litres water in a kettle. Heat the oil in a large non-stick frying pan and cook the spring onions for 5 mins, stirring frequently, or until softened. Add the cucumber, lettuce and peas, then pour in the boiled water. Stir in the bouillon, cover and simmer for 10 mins or until the vegetables are soft but still bright green. Blitz the mixture with a hand blender until smooth. Serve hot or cold, topped with yogurt (if you like), with rye bread alongside."
 	},
 	{
 		"name": "Pasta salad",
 		"ingredients": [{
-			"Wholemeal pasta": "",
-			"Tomato sauce with basil": "",
-			"Tuna":""
+			"Wholemeal pasta": "/realfood/others/wholemeal/",
+			"Tomato sauce with basil": "/realfood/vegetables/tomato",
+			"Tuna":"/realfood/fish/tuna"
 		}],
 		"preparation": "Boil the pasta por 10-14 minutes. Add tomato sauce and tuna."
 	},
 	{
 		"name": "Chicken with tomato and avocado toast",
 		"ingredients": [{
-			"3 slices of bread": "",
-			"1 tomato": "",
-			"Chicken":"",
-			"1 Avocado":""
+			"3 slices of bread": "/realfood/others/wholemeal",
+			"1 tomato": "/realfood/vegetables/tomato",
+			"Chicken":"/realfood/meat/chicken",
+			"1 Avocado": "/avocado/"
 		}],
 		"preparation": "Its pretty clear. Put the chicken, tomato and avocado in a toast."
 	},
 	{
 		"name": "Greek style roast fish",
 		"ingredients": [{
-			"5 small potatoes": "",
-			"1 onion, halved and sliced": "",
-			"2 garlic":"",
-			"1 tsp olive oil":"",
-			"2 large tomatoes":""
+			"5 small potatoes": "/realfood/vegetables/potato",
+			"1 onion, halved and sliced": "/realfood/vegetables/onion",
+			"2 garlic":"/realfood/vegetables/garlic",
+			"1 tsp olive oil":"/realfood/others/oil",
+			"2 large tomatoes":"/realfood/vegetables/tomato"
 		}],
 		"preparation": "Heat oven to 200C/180C fan/gas 6. Tip the potatoes, onion, garlic, oregano and olive oil into a roasting tin, season, then mix together with your hands to coat everything in the oil. Roast for 15 mins, turn everything over and bake for 15 mins more. Add the lemon and tomatoes, and roast for 10 mins, then top with the fish fillets and cook for 10 mins more. Serve with parsley scattered over."
 	},
 	{
 		"name": "Curried cod",
 		"ingredients": [{
-			"1 tbsp oil": "",
-			"1 onion, chopped": "",
-			"2 tbsp medium curry powder":"",
-			"ginger, peeled and finely grated":"",
-			"3 garlic gloves":"",
-			"2 cans of chopped tomatoes":"",
-			"chickpeas":"",
-			"4 cod fillets":"",
-			"1 lemon cut into wedges":"",
-			"handful coriander, roughly chopped":""
+			"1 tbsp oil": "/realfood/others/oil",
+			"1 onion, chopped": "/realfood/vegetables/onion",
+			"2 tbsp medium curry powder":"/oops/",
+			"ginger, peeled and finely grated":"/oops/",
+			"3 garlic gloves":"/realfood/vegetables/garlic",
+			"2 cans of chopped tomatoes":"/realfood/vegetables/tomato",
+			"chickpeas":"/realfood/others/beans",
+			"4 cod fillets":"/realfood/fish/cod",
+			"1 lemon cut into wedges":"/oops/",
+			"handful coriander, roughly chopped":"/oops/"
 		}],
 		"preparation": "Heat the oil in a large, lidded frying pan. Cook the onion over a high heat for a few mins, then stir in the curry powder, ginger and garlic. Cook for another 1-2 mins until fragrant, then stir in the tomatoes, chickpeas and some seasoning. Cook for 8-10 mins until thickened slightly, then top with the cod. Cover and cook for another 5-10 mins until the fish is cooked through. Scatter over the lemon zest and coriander, then serve with the lemon wedges to squeeze over."
 	}
