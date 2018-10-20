@@ -160,9 +160,13 @@ span {
 .mp7{
   grid-row-start: 4;
   grid-row-end: 6;
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+.mp7-1, .mp7-2{
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .icon{

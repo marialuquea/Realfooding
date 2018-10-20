@@ -31,9 +31,14 @@ def realfood():
 def ultra():
     return render_template('ultra.html')
 
-@app.route('/mealplan/')
+@app.route('/mealplan/', methods=['POST','GET'])
 def mealplan():
     return render_template('mealplan.html')
+
+@app.route('/mealplan/pyramid/', methods=['GET'])
+def pyramid():
+    if request.method == 'GET':
+        return send_from_directory(directory='static/files/', filename='pyramid.pdf')
 
 @app.route('/groceries/')
 def groceries():
