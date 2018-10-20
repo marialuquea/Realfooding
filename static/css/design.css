@@ -74,6 +74,19 @@ span {
   justify-content: flex-start;
   align-items: center;
 }
+.item18{
+  background: white;
+  color: #d32f2c;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .intro {
   height: 80px;
@@ -256,5 +269,12 @@ button:hover{ background-color: Transparent; color: #d32f2c}
   background: rgba(255, 255, 255, 0.9);
   margin: 10px auto;
   padding:20px;
+  color: #d32f2c;
+}
+
+footer{
+  margin: 0;
+  padding: 10px;
+  background: white;
   color: #d32f2c;
 }

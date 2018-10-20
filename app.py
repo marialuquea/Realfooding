@@ -31,7 +31,7 @@ def realfood():
 def ultra():
     return render_template('ultra.html')
 
-@app.route('/mealplan/', methods=['POST','GET'])
+@app.route('/mealplan/')
 def mealplan():
     return render_template('mealplan.html')
 
@@ -101,10 +101,8 @@ def do_admin_login():
     if request.method == 'POST':
         if request.form['password'] == '1234' and request.form['username'] == 'maria':
             session['logged_in'] = True
-            print('---------------LOGIN SUCCESSFUL-----------------')
             return redirect('/', code=302)
         else:
-            print('---------------WRONG PASSWORD--------------')
             message = 'Wrong password'
             return render_template('login.html', message=message)
 
@@ -112,7 +110,6 @@ def do_admin_login():
 @app.route("/logout")
 def logout():
     session['logged_in'] = False
-    print('---------------You logged out--------------')
     return redirect('/', code=302)
 
 """
@@ -252,7 +249,6 @@ def mealplanopt(option):
         return render_template('mealplan/plans.html', option=option)
     else:
         return render_template('404error.html')
-
 
 @app.route('/groceries/<option>/')
 def groceryopt(option):
