@@ -1,6 +1,9 @@
-# Advanced Web Tech (set09103)
-## Coursework 1
-### RealFooding, eating healthy
+# RealFooding, eating healthy
+
+## Advanced Web Tech (SET09103) 2018
+
+### Coursework 1
+
 
 #### To run the program:
 
