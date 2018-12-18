@@ -2,10 +2,9 @@
 
 ## Advanced Web Tech (SET09103) 2018
 
-### Coursework 1
+### Coursework 1 - Edinburgh Napier University
 
-
-#### To run the program:
+To run the program:
 
 1. ``` $ cd ``` to the project folder
 2. ``` $ pip install --user flask```
