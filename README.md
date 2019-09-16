@@ -1,4 +1,4 @@
-# RealFooding, eating healthy 
+# RealFooding, eating healthy :)
 
 ## Advanced Web Tech (SET09103) 2018
 
