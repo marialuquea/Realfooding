@@ -1,9 +1,5 @@
 # RealFooding, eating healthy :)
 
-## Advanced Web Tech (SET09103) 2018
-
-### Coursework 1 - Edinburgh Napier University
-
 To run the program:
 
 1. ``` $ cd ``` to the project folder
