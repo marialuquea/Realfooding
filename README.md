@@ -1,4 +1,4 @@
-# RealFooding, eating healthy :)
+# RealFooding, eating healthy 
 
 To run the program:
 
